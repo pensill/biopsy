@@ -1,0 +1,549 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* colors */
+.afterElemet {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.absoluteCenterElement {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* 
+88""Yb    db    .dP"Y8 888888 
+88__dP   dPYb   `Ybo." 88__   
+88""Yb  dP__Yb  o.`Y8b 88""   
+88oodP dP""""Yb 8bodP' 888888  */
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Open Sans;
+  font-size: 13px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+  overflow-x: hidden;
+}
+.button {
+  border: none;
+  border-radius: 1.154em;
+  /* 15 */
+  padding: 0em 1.538em;
+  /*20*/
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+}
+.button a {
+  font-size: 1.077em;
+  /*14*/
+  line-height: 2.214em;
+  /*31*/
+  color: white;
+}
+.button a:hover {
+  text-decoration: none;
+}
+.button--violet {
+  background: #8165b2;
+}
+.button--white-border {
+  border: 2px solid white;
+}
+.button--white-border:hover {
+  background: white;
+}
+.button--white-border:hover a {
+  color: #8165b2;
+}
+.button--green-border {
+  border: 2px solid #3d8d61;
+  background: white;
+}
+.button--green-border a {
+  color: #3d8d61;
+}
+.button--green-border:hover {
+  background: #3d8d61;
+}
+.button--green-border:hover a {
+  color: white;
+}
+.button--fat {
+  border-radius: 2em;
+}
+.button--fat a {
+  line-height: 40px;
+}
+/* 
+88""Yb    db    .dP"Y8 888888     888888 88b 88 8888b.  
+88__dP   dPYb   `Ybo." 88__       88__   88Yb88  8I  Yb 
+88""Yb  dP__Yb  o.`Y8b 88""       88""   88 Y88  8I  dY 
+88oodP dP""""Yb 8bodP' 888888     888888 88  Y8 8888Y"   */
+/* 
+88  88 888888    db    8888b.  888888 88""Yb 
+88  88 88__     dPYb    8I  Yb 88__   88__dP 
+888888 88""    dP__Yb   8I  dY 88""   88"Yb  
+88  88 888888 dP""""Yb 8888Y"  888888 88  Yb 
+ */
+.page-header {
+  margin: 0em;
+  padding: 0em;
+  border-bottom: none;
+  overflow: visible;
+}
+.page-header__logo {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+/* top menu */
+.top-menu {
+  background: url(img/top_menu.jpg) no-repeat;
+  background-position: right;
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.top-menu:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: -285px;
+  width: 300px;
+  height: 40px;
+  background: url(img/top_menu-after.jpg);
+}
+.top-menu__items {
+  display: inline-block;
+  margin: 0em;
+}
+.top-menu__item {
+  list-style: none;
+  display: inline-block;
+  padding-right: 3.077em;
+}
+.top-menu__item--summ {
+  padding-left: 1.154em;
+}
+.top-menu__item a {
+  font-size: 1.077em;
+  /* 14px */
+  color: #8165b2;
+  text-decoration: underline;
+}
+.top-menu__item a:hover {
+  text-decoration: none;
+}
+.top-menu .fa {
+  color: #8165b2;
+  padding-right: 3px;
+}
+/* top menu end */
+/* main nav */
+.main-nav {
+  margin: 0;
+  z-index: 10;
+  text-align: right;
+  padding-top: 1.154em;
+  /* 15 */
+}
+.main-nav__items {
+  list-style: none;
+  position: relative;
+  z-index: 10;
+}
+.main-nav__item {
+  display: inline-block;
+  text-align: center;
+}
+.main-nav__item a {
+  display: block;
+  font-size: 1.077em;
+  /* 14 */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #454545;
+  font-weight: 700;
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 4.286em;
+}
+.main-nav__item a:hover {
+  color: #8165b2;
+}
+.main-nav__item--sub {
+  position: relative;
+  margin-right: 1.077em;
+}
+.main-nav__item--sub .fa-angle-down {
+  position: absolute;
+  top: 23px;
+  right: 0%;
+  font-weight: 700;
+  color: #454545;
+}
+.main-nav__item--sub:hover .fa-angle-down {
+  color: #8165b2;
+}
+.main-nav__item--sub:hover > .main-nav__sub-menu {
+  display: block;
+}
+.main-nav__sub-menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  width: 190px;
+  top: 4.615em;
+  /* 60 */
+  left: -35%;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  text-align: center;
+  padding-top: 0.769em;
+  /*  10 */
+  padding-bottom: 0.769em;
+  /*  10 */
+}
+.main-nav__sub-menu a {
+  line-height: 1.000em;
+  /*  36 */
+  font-size: 0.923em;
+  /* 12 */
+  font-weight: normal;
+  text-transform: none;
+}
+.main-nav__sub-item {
+  text-align: left;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+  width: 170px;
+  margin: 0 auto;
+}
+.main-nav__sub-item:hover {
+  background: #8165b2;
+  border-radius: 6px;
+}
+.main-nav__sub-item:hover a {
+  color: white;
+}
+/* main nav end*/
+/* header search */
+.header-search {
+  vertical-align: middle;
+  padding-top: 2.692em;
+  /* 35 */
+  position: relative;
+  text-align: right;
+}
+.header-search * {
+  display: inline-block;
+}
+.header-search .fa-search {
+  color: #8165b2;
+  opacity: 0.4;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+  padding-left: 2px;
+}
+.header-search .fa-search:hover {
+  opacity: 1;
+}
+.header-search__input[type="search"] {
+  opacity: 0;
+  width: 200px;
+  position: absolute;
+  left: -220px;
+  bottom: -9px;
+  z-index: 40;
+  border: 1px solid grey;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+/* header search end*/
+/* 
+88  88 888888    db    8888b.  888888 88""Yb     888888 88b 88 8888b.  
+88  88 88__     dPYb    8I  Yb 88__   88__dP     88__   88Yb88  8I  Yb 
+888888 88""    dP__Yb   8I  dY 88""   88"Yb      88""   88 Y88  8I  dY 
+88  88 888888 dP""""Yb 8888Y"  888888 88  Yb     888888 88  Y8 8888Y"  
+ */
+main {
+  background: #f1f1f1;
+  height: 400px;
+}
+/* 
+8b    d8    db    88 88b 88     88""Yb    db     dP""b8 888888 
+88b  d88   dPYb   88 88Yb88     88__dP   dPYb   dP   `" 88__   
+88YbdP88  dP__Yb  88 88 Y88     88"""   dP__Yb  Yb  "88 88""   
+88 YY 88 dP""""Yb 88 88  Y8     88     dP""""Yb  YboodP 888888  */
+.section-preview {
+  height: 835px;
+  background: #f1f1f1;
+  position: relative;
+  /*first block end preview*/
+}
+.section-preview__bg-people {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('img/main-page/banner_other.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 835px;
+  z-index: 9;
+}
+.section-preview__bg-girl {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('img/main-page/banner_girl.png');
+  width: 407px;
+  height: 560px;
+  z-index: 10;
+  margin-top: 140px;
+  left: 60px;
+}
+.section-preview__block-info {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  z-index: 10;
+  margin-top: 500px;
+  background: #8165b2;
+  border-radius: 6px;
+  padding: 2.500em 2.000em;
+  /* 40 26 */
+  color: white;
+}
+.section-preview__title {
+  font-size: 1.231em;
+  /*  16 */
+  font-weight: 600;
+  line-height: 1.563em;
+  /*  25 */
+  padding-bottom: 1.375em;
+  /* 22 + 10(p) */
+}
+.section-preview__text {
+  font-weight: 400;
+  line-height: 1.769em;
+  /* 23 */
+  padding-top: 1.692em;
+  /* 22 */
+}
+.section-preview__text:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 1px solid #c0b2d8;
+  width: 100%;
+  top: -4px;
+}
+.section-preview__button {
+  vertical-align: bottom;
+  text-align: right;
+  padding-top: 42px;
+}
+.section-products {
+  background: url('img/main-page/production.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding-top: 11.538em;
+  padding-bottom: 16.154em;
+  /* 210 */
+  text-align: center;
+  /* second block end products */
+}
+.section-products__container {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.section-products__container--1 {
+  border-bottom: 1px solid #c0b2d8;
+}
+.section-products h2 {
+  font-family: 'Exo 2 Condensed';
+  font-size: 2.615em;
+  /* 34 */
+  padding-bottom: 1.618em;
+  /*  55 */
+}
+.section-products p {
+  font-size: 1.385em;
+  /* 18 */
+  font-weight: 600;
+}
+.section-products a {
+  color: white;
+}
+.section-products a:hover {
+  color: white;
+  text-decoration: none;
+}
+.section-products__item {
+  box-sizing: border-box;
+  margin-top: 3.231 em;
+  padding-top: 1em;
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+  min-height: 160px;
+}
+.section-products__item:hover {
+  background: #8165b2;
+}
+.section-products__item img {
+  padding-bottom: 1.538em;
+  /* 20 */
+}
+.section-shop {
+  padding-top: 8.308em;
+  /* 108 */
+  padding-bottom: 10.000em;
+  /* 130 */
+  background: url(img/main-page/shop.png);
+  background-attachment: fixed;
+  background-position: 320px center;
+  background-repeat: no-repeat;
+}
+.section-shop h2 {
+  color: #494157;
+  font-family: 'Exo 2 Condensed';
+  font-size: 2.615em;
+  /* 34 */
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-left: 55px;
+  padding-bottom: 60px;
+}
+.section-shop h2:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(img/sprites.png) no-repeat -95px 0;
+  width: 41px;
+  height: 35px;
+  top: 3px;
+  left: 0px;
+}
+.section-shop__left {
+  position: relative;
+  z-index: 10;
+}
+.section-shop__img {
+  display: inline-block;
+}
+.section-shop__img--1 {
+  position: absolute;
+  left: -145px;
+  padding-top: 500px;
+}
+.section-shop__img--1 img {
+  height: 100%;
+}
+.section-shop__img--3 {
+  padding-left: 140px;
+}
+.section-shop__img--3 img {
+  width: 101px;
+  height: 451px;
+}
+.section-shop__img--4 {
+  position: absolute;
+  left: 500px;
+  padding-top: 300px;
+}
+.section-shop__img--4 img {
+  height: 100%;
+}
+.section-shop__right h3 {
+  font-size: 1.692em;
+  /* 22 */
+  font-weight: 700;
+  color: #494157;
+  padding-bottom: 1.818em;
+  /* 40 */
+}
+.section-shop__right ul {
+  padding-top: 0.867em;
+  /* 15 */
+  position: relative;
+  left: 22px;
+  padding-bottom: 3.077em;
+}
+.section-shop__right ul:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80%;
+  border: 1px solid #3d8d61;
+  left: -23px;
+  top: -1px;
+}
+.section-shop__right li {
+  position: relative;
+  list-style: none;
+  font-size: 1.385em;
+  /* 18 */
+  color: dimgrey;
+  line-height: 1.944em;
+  /* 35 */
+}
+.section-shop__right li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #3d8d61;
+  border-radius: 5px;
+  left: -20px;
+  top: 13px;
+}
+.section-contact {
+  background: red;
+  height: 300px;
+}
+/* .section end */
+/* 
+8b    d8    db    88 88b 88     88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
+88b  d88   dPYb   88 88Yb88     88__dP   dPYb   dP   `" 88__       88__   88Yb88  8I  Yb 
+88YbdP88  dP__Yb  88 88 Y88     88"""   dP__Yb  Yb  "88 88""       88""   88 Y88  8I  dY 
+88 YY 88 dP""""Yb 88 88  Y8     88     dP""""Yb  YboodP 888888     888888 88  Y8 8888Y"   */
+/* 
+88""Yb 888888 .dP"Y8 88""Yb  dP"Yb  88b 88 .dP"Y8 88 Yb    dP 888888 
+88__dP 88__   `Ybo." 88__dP dP   Yb 88Yb88 `Ybo." 88  Yb  dP  88__   
+88"Yb  88""   o.`Y8b 88"""  Yb   dP 88 Y88 o.`Y8b 88   YbdP   88""   
+88  Yb 888888 8bodP' 88      YbodP  88  Y8 8bodP' 88    YP    888888  */

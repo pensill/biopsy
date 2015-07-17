@@ -1,0 +1,52 @@
+.Arthroscopy, .biopsy, .discotomy, .gynecology, .kyphoplasty, .mammalogy, .urology, .Vertebroplasty{
+	background: url(sprites.png) no-repeat;
+}
+
+.Arthroscopy{
+	background-position: -100px -99.00000762939453px ;
+	width: 95px;
+	height: 105px;
+}
+
+.biopsy{
+	background-position: 0 0;
+	width: 72px;
+	height: 106px;
+}
+
+.discotomy{
+	background-position: 0 -111.00000762939453px ;
+	width: 84px;
+	height: 112px;
+}
+
+.gynecology{
+	background-position: -200px 0;
+	width: 100px;
+	height: 98px;
+}
+
+.kyphoplasty{
+	background-position: -499px 0;
+	width: 81px;
+	height: 110px;
+}
+
+.mammalogy{
+	background-position: -100px 0;
+	width: 77px;
+	height: 99px;
+}
+
+.urology{
+	background-position: -300px 0;
+	width: 93px;
+	height: 108px;
+}
+
+.Vertebroplasty{
+	background-position: -400px 0;
+	width: 80px;
+	height: 108px;
+}
+

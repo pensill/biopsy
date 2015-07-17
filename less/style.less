@@ -1,0 +1,539 @@
+@import 'elements.less';
+@import 'variables.less';
+@import 'mixins.less';
+/* 
+88""Yb    db    .dP"Y8 888888 
+88__dP   dPYb   `Ybo." 88__   
+88""Yb  dP__Yb  o.`Y8b 88""   
+88oodP dP""""Yb 8bodP' 888888  */
+ul, li{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Open Sans;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    overflow-x: hidden;
+}
+.button{
+    border:none;
+    border-radius: 1.154em; /* 15 */
+    padding:0em 1.538em; /*20*/
+    transition: all 0.5s linear;
+    
+    & a{
+        font-size:1.077em; /*14*/
+        line-height: 2.214em; /*31*/
+        color: white;
+        &:hover{
+            text-decoration: none;
+
+        }
+    }
+
+    &--violet{
+        background: @colorviolet;
+    }
+    &--white-border{
+        border: 2px solid white;
+        &:hover{
+            background: white;
+            & a{
+                color: @colorviolet;
+            }
+        }
+    }
+    &--green-border{
+        border: 2px solid @colorGreen;
+        background: white;
+        & a{
+            color: @colorGreen;
+        }
+        &:hover{
+            background: @colorGreen;
+            & a{
+                color: white;
+            }
+        }
+    }
+
+    &--fat{
+        border-radius: 2em;
+        & a{
+            line-height: 40px;
+        }
+    }
+
+}
+
+
+/* 
+88""Yb    db    .dP"Y8 888888     888888 88b 88 8888b.  
+88__dP   dPYb   `Ybo." 88__       88__   88Yb88  8I  Yb 
+88""Yb  dP__Yb  o.`Y8b 88""       88""   88 Y88  8I  dY 
+88oodP dP""""Yb 8bodP' 888888     888888 88  Y8 8888Y"   */
+
+/* 
+88  88 888888    db    8888b.  888888 88""Yb 
+88  88 88__     dPYb    8I  Yb 88__   88__dP 
+888888 88""    dP__Yb   8I  dY 88""   88"Yb  
+88  88 888888 dP""""Yb 8888Y"  888888 88  Yb 
+ */
+.page-header{
+    margin: 0em;
+    padding: 0em;
+    border-bottom:none;
+    overflow: visible;
+
+    &__logo{
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+}
+
+/* top menu */
+.top-menu{
+    background: url(img/top_menu.jpg) no-repeat;
+    background-position: right;
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0px;
+        right: -285px;
+        width: 300px;
+        height: 40px;
+        background: url(img/top_menu-after.jpg);
+    }
+    &__items{
+        display: inline-block;
+        margin: 0em;
+    }
+    &__item{
+        list-style: none;
+        display: inline-block;
+        padding-right: 3.077em;
+
+        &--summ{
+            padding-left: 1.154em;
+        }
+
+        & a{
+            font-size:1.077em; /* 14px */
+            color: @colorviolet;
+            text-decoration: underline;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    & .fa{
+        color: @colorviolet;
+        padding-right: 3px;
+    }
+}
+/* top menu end */
+
+/* main nav */
+.main-nav {
+    margin: 0;
+    z-index: 10;
+    text-align: right;
+    padding-top: 1.154em;/* 15 */
+
+    &__items{
+        list-style: none;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__item {
+        display: inline-block;
+        text-align: center;
+
+        & a{
+            display: block;
+            font-size: 1.077em; /* 14 */
+            text-decoration: none;
+            text-transform: uppercase;
+            color: @colorText;
+            font-weight: 700;
+            padding-left: 1em;
+            padding-right: 1em;
+            line-height: 4.286em;
+
+            &:hover{
+                color: @colorviolet;
+            }
+        }
+    }
+
+    &__item--sub{
+        position: relative;
+        margin-right: 1.077em;
+
+        & .fa-angle-down{
+            position: absolute;
+            top: 23px;
+            right: 0%;
+            font-weight: 700;
+            color: @colorText;
+        }
+
+        &:hover .fa-angle-down{
+            color: @colorviolet;
+        }
+
+        &:hover>.main-nav__sub-menu {
+            display:block;
+        }
+    }
+
+    &__sub-menu {
+        display: none;
+        list-style: none;
+        position: absolute;
+        width: 190px;
+        top: 4.615em;/* 60 */
+        left: -35%;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease;
+        text-align: center;
+        padding-top: 0.769em;/*  10 */
+        padding-bottom: 0.769em;/*  10 */
+
+        & a{
+            line-height: 1.000em;/*  36 */
+            font-size: 0.923em; /* 12 */
+            font-weight: normal;
+            text-transform: none;
+        }
+    }
+
+    &__sub-item{
+        text-align: left;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        transition: all 0.2s ease;
+        width: 170px;
+        margin: 0 auto;
+
+        &:hover{
+            background: @colorviolet;
+            border-radius: 6px;
+            & a{
+                color: white;
+            }
+        }
+    }
+}
+/* main nav end*/
+
+
+/* header search */
+    .header-search{
+        vertical-align: middle;
+        padding-top: 2.692em; /* 35 */
+        position: relative;
+        text-align: right;
+
+        & *{
+            display: inline-block;
+        }
+        & .fa-search{
+            color: @colorviolet;
+            opacity: 0.4;
+            cursor: pointer;
+            position: relative;
+            z-index: 50;
+            padding-left: 2px;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        &__input[type="search"]{
+            opacity: 0;
+            width: 200px;
+            position: absolute;
+            left:-220px;
+            bottom:-9px;
+            z-index: 40;
+            border:1px solid grey;
+            padding:0.5em;
+            border-radius: 5px;
+        }
+    }
+/* header search end*/
+
+/* 
+88  88 888888    db    8888b.  888888 88""Yb     888888 88b 88 8888b.  
+88  88 88__     dPYb    8I  Yb 88__   88__dP     88__   88Yb88  8I  Yb 
+888888 88""    dP__Yb   8I  dY 88""   88"Yb      88""   88 Y88  8I  dY 
+88  88 888888 dP""""Yb 8888Y"  888888 88  Yb     888888 88  Y8 8888Y"  
+ */
+
+main{
+    background: #f1f1f1;
+    height: 400px;
+}
+
+
+/* 
+8b    d8    db    88 88b 88     88""Yb    db     dP""b8 888888 
+88b  d88   dPYb   88 88Yb88     88__dP   dPYb   dP   `" 88__   
+88YbdP88  dP__Yb  88 88 Y88     88"""   dP__Yb  Yb  "88 88""   
+88 YY 88 dP""""Yb 88 88  Y8     88     dP""""Yb  YboodP 888888  */
+
+.section{
+
+    &-preview{
+        height: 835px;
+        background: #f1f1f1;
+        position: relative;
+
+        &__bg-people{
+            .absoluteCenterElement;
+            background: url('img/main-page/banner_other.png');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 835px;
+            z-index: 9;
+        }
+
+        &__bg-girl{
+            .absoluteCenterElement;
+            background: url('img/main-page/banner_girl.png');
+            width: 407px;
+            height: 560px;
+            z-index: 10;
+            margin-top: 140px;
+            left:60px;
+        }
+
+        &__block-info{
+            .absoluteCenterElement;
+            position: relative;
+            z-index: 10;
+            margin-top: 500px;
+            background: @colorviolet;
+            border-radius: 6px;
+            padding: 2.500em 2.000em;  /* 40 26 */
+            color: white;
+        }
+        &__title{
+            font-size: 1.231em;/*  16 */
+            font-weight: 600;
+            line-height: 1.563em;/*  25 */
+            padding-bottom: 1.375em; /* 22 + 10(p) */
+            
+        }
+        &__text{
+            font-weight: 400;
+            line-height: 1.769em; /* 23 */
+            padding-top: 1.692em; /* 22 */
+
+            &:before{
+                    .afterElemet;
+                    border-top: 1px solid @colorvioletOpacity;
+                    width: 100%;
+                    top:-4px;
+            }
+        }
+
+        &__button{
+            vertical-align: bottom;
+            text-align: right;
+            padding-top: 42px;
+        }
+
+/*first block end preview*/
+    }
+
+    &-products{
+        background: url('img/main-page/production.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+        color: white;
+        padding-top: 11.538em;
+        padding-bottom: 16.154em; /* 210 */
+        text-align: center;
+
+        &__container{
+            padding-bottom: 40px;
+            padding-top: 40px;
+
+            &--1{
+                border-bottom: 1px solid @colorvioletOpacity;
+            }
+
+            
+        }
+        & h2{
+            font-family: @fontTitle;
+            font-size: 2.615em; /* 34 */
+            padding-bottom: 1.618em;/*  55 */
+        }
+        & p{
+            font-size: 1.385em; /* 18 */
+            font-weight: 600;
+        }
+        & a{
+            color: white;
+            &:hover{
+                color: white;
+                text-decoration: none;
+            }
+        }
+        &__item{
+            box-sizing: border-box;
+            margin-top: 3.231 em;
+            padding-top: 1em;
+            transition: all 0.4s ease;
+            min-height: 160px;
+
+            &:hover{
+                background: @colorviolet;
+            }
+
+            & img{
+               padding-bottom: 1.538em; /* 20 */
+            }
+        }
+/* second block end products */
+    }
+
+    &-shop{
+        padding-top: 8.308em; /* 108 */
+        padding-bottom: 10.000em; /* 130 */
+        background: url(img/main-page/shop.png);
+        background-attachment: fixed;
+        background-position: 320px center;
+        background-repeat: no-repeat;
+
+
+        & h2{
+            color: #494157;
+            font-family:  @fontTitle;
+            font-size: 2.615em; /* 34 */
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding-left: 55px;
+            padding-bottom: 60px;
+
+            &:after{
+                .afterElemet;
+                background: url(img/sprites.png) no-repeat -95px 0;
+                width: 41px;
+                height: 35px;
+                top: 3px;
+                left: 0px;
+            }
+        }
+
+        &__left{
+            position: relative;
+            z-index: 10;
+        }
+        &__img{
+            display: inline-block;
+            &--1{
+                position: absolute;
+                left:-145px;
+                padding-top: 500px;
+                & img{
+                    height: 100%;
+                }
+            }
+            &--3{
+                padding-left: 140px;
+                & img{
+                    width: 101px;
+                    height: 451px;
+                }
+            }
+            &--4{
+                position: absolute;
+                left:500px;
+                padding-top: 300px;
+                & img{
+                    height: 100%;
+                }
+            }
+        }
+
+        &__right{
+            & h3{
+                font-size: 1.692em; /* 22 */
+                font-weight: 700;
+                color: #494157;
+                padding-bottom: 1.818em; /* 40 */
+            }
+            & ul{
+                padding-top:0.867em; /* 15 */
+                position: relative;
+                left: 22px;
+                padding-bottom: 3.077em;
+
+                &:before{
+                    .afterElemet;
+                    width: 80%;
+                    border:1px solid @colorGreen;
+                    left: -23px;
+                    top: -1px;
+                }
+            }
+            & li{
+                position: relative;
+                list-style: none;
+                font-size: 1.385em; /* 18 */
+                color: dimgrey;
+                line-height: 1.944em; /* 35 */
+                &:before{
+                    .afterElemet;
+                    width: 10px;
+                    height: 10px;
+                    background: @colorGreen;
+                    border-radius: 5px;
+                    left: -20px;
+                    top: 13px;
+                }
+            }
+        }
+    }
+
+
+
+    &-contact{
+        background: red;
+        height: 300px;
+    }
+
+
+} /* .section end */
+
+/* 
+8b    d8    db    88 88b 88     88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
+88b  d88   dPYb   88 88Yb88     88__dP   dPYb   dP   `" 88__       88__   88Yb88  8I  Yb 
+88YbdP88  dP__Yb  88 88 Y88     88"""   dP__Yb  Yb  "88 88""       88""   88 Y88  8I  dY 
+88 YY 88 dP""""Yb 88 88  Y8     88     dP""""Yb  YboodP 888888     888888 88  Y8 8888Y"   */
+
+
+@import 'animations.less';
+@import 'responsive.less';
+ 

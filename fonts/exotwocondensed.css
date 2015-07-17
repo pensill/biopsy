@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Exo 2 Condensed';
+    src: url('exo2-boldcondensed.eot');
+    src: url('exo2-boldcondensed.woff') format('woff'), url('exo2-boldcondensed.woff2') format('woff2'), url('exo2-boldcondensed.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

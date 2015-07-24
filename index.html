@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <title>Biopsy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- fonts -->
@@ -10,11 +10,15 @@
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<!--     <link rel="stylesheet" type="text/css" href="css/owl.theme.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- script -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+    <script src="js/owl.carousel.min.js"></script>
+    sc
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
     <!-- script end -->
 </head>
@@ -38,7 +42,7 @@
                                    <ul class="top-menu__items">
                                        <li class="top-menu__item top-menu__item--inter"><i class="fa fa-user fa-2"></i><a href="">Вход</a></li>
                                        <li class="top-menu__item top-menu__item--registration"><i class="fa fa-info-circle fa-2"></i><a href="">Регистрация</a></li>
-                                       <li class="top-menu__item top-menu__item--card"><i class="fa fa-shopping-cart fa-2"></i><a href="">Корзина</a><span class="top-menu__item--summ">9,999,999 руб</span></li>
+                                       <li class="top-menu__item top-menu__item--card"><i class="fa fa-shopping-cart fa-2"></i><span class="badge">11</span><a href="">Корзина</a><span class="top-menu__item--summ">9,999,999 руб</span></li>
                                    </ul>
                                    <button class="button button--violet"><a href="№">Оформить заказ</a></button>
                                </div>
@@ -90,9 +94,7 @@
             </div>
         </div> <!-- container header end -->
     </header>
-
     <main>
-
         <section class="section section-preview">
             <div class="container">
                 <div class="row">
@@ -223,9 +225,55 @@
 
         <section class="section section-contact">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        
+                <div class="row contact">
+                    <div class="col-md-4">
+                        <div class="contact__text">
+                          <h2>Контакты</h2>
+                          <ul class="contact__items">
+                            <li class="contact__item">Тел. +7 (495) 505-50-15</li>
+                            <li class="contact__item">Режим работы: с 10:00 до 19:00</li>
+                            <li class="contact__item contact__item--green">E-mail: info@bard-biopsy.ru</li>
+                            <li class="contact__item">Москва, Россия</li>
+                            <li class="contact__item">Октябрьская наб. д, 10</li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="row">
+                          <div class="col-md-4 contact-persons">
+                              <div class="contact-person">
+                                  <div class="contact-person--text">
+                                      <img src="img/main-page/doctor_1.jpg" alt="" class="contact-person__img">
+                                      <h4>Иван Петров</h4>
+                                      <p class="contact-person__position">ГЕНЕРАЛЬНЫЙ ДИРЕКТОР</p>
+                                      <p class="contact-person__email">info@bard-biopsy.ru</p>
+                                      <p class="contact-person__tel">+7 (495) 505-50-15</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 contact-persons">
+                              <div class="contact-person">
+                                  <div class="contact-person--text">
+                                      <img src="img/main-page/doctor_2.jpg" alt="" class="contact-person__img">
+                                      <h4>Иван Петров</h4>
+                                      <p class="contact-person__position">ГЕНЕРАЛЬНЫЙ ДИРЕКТОР</p>
+                                      <p class="contact-person__email">info@bard-biopsy.ru</p>
+                                      <p class="contact-person__tel">+7 (495) 505-50-15</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-4 contact-persons">
+                              <div class="contact-person">
+                                  <div class="contact-person--text">
+                                      <img src="img/main-page/doctor_3.jpg" alt="" class="contact-person__img">
+                                      <h4>Иван Петров</h4>
+                                      <p class="contact-person__position">ГЕНЕРАЛЬНЫЙ ДИРЕКТОР</p>
+                                      <p class="contact-person__email">info@bard-biopsy.ru</p>
+                                      <p class="contact-person__tel">+7 (495) 505-50-15</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div> <!-- container section-contact end -->
@@ -234,23 +282,86 @@
         <section class="section section-map">
             <div id="ya_maps" style="width: 100%; height: 580px"></div> <!-- container section-map end -->
         </section>
-
-        
-
     </main>
     <footer class="page-footer">
         <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="page-footer__logo">
+                      <a href=""><img src="img/logo_footer.svg"></a>
+                  </div>
+              </div>
+              <div class="col-md-8">
+                  <div id="logo-carousel" class="logo-carousel">
+                    <img src="img/footer/foot_logo4.png">
+                      <img src="img/footer/foot_logo2.png">
+                      <img src="img/footer/foot_logo4.png">
+                      <img src="img/footer/foot_logo5.png">
+                      <img src="img/footer/foot_logo4.png">
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-3">
+                  <div class="page-footer__block">
+                      <h4>О магазине</h4>
+                      <ul class="page-footer__items">
+                          <li class="page-footer__item"><a href="">Условия доставки</a></li>
+                          <li class="page-footer__item"><a href="">Способы оплаты</a></li>
+                          <li class="page-footer__item"><a href="">Акции и скидки</a></li>
+                          <li class="page-footer__item"><a href="">Оптовым покупателям</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="page-footer__block">
+                      <h4>Информация</h4>
+                      <ul class="page-footer__items">
+                          <li class="page-footer__item"><a href="">Новости и статьи</a></li>
+                          <li class="page-footer__item"><a href="">Вопросы и ответы</a></li>
+                          <li class="page-footer__item"><a href="">Отзывы заказчиков</a></li>
+                          <li class="page-footer__item"><a href="">Благотворительность</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="page-footer__block">
+                      <h4>Звоните нам</h4>
+                      <ul class="page-footer__items">
+                          <li class="page-footer__item">По будням с 10:00 до 18:00</li>
+                          <li class="page-footer__item">(495) 505-50-15, 641-00-76</li>
+                          <li class="page-footer__item">(499) 501-00-04, 501-00-08</li>
+                          <li class="page-footer__item">(499) 940-32-42, 940-14-38</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                  <div class="page-footer__block page-footer__social">
+                      <h4>Поделиться</h4>
+                      <ul class="page-footer__items">
+                          <li class="page-footer__item"><a href=""><i></i>Vkontakte</a></li>
+                          <li class="page-footer__item"><a href=""><i></i>Facebook</a></li>
+                          <li class="page-footer__item"><a href=""><i></i>Оdnoklassniki</a></li>
+                          <li class="page-footer__item"><a href=""><i></i>Twitter</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="container-fluid page-footer__buttom">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        
-                    </div>
+                  <div class="col-md-8">
+                      <p class="page-footer__copyright">© ООО "Биопси Медикал" 2015</p>
+                  </div>
+                  <div class="col-md-4">
+                      <p class="page-footer__copyright">По всем вопросам обращаться по телефону  8 911 123-45-67</p>
+                  </div>
                 </div>
             </div>
+        </div>
     </footer>
-
-
-
-
 
 </body>
 </html>

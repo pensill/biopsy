@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Biopsy - оформление заказа</title>
+    <title>Biopsy - список заказов</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- fonts -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -155,338 +155,306 @@
         </div> <!-- container header end -->
     </header>
     <main>
-
-        <section class="section">
+        <section class="section section-list">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="page-title">Оформление заказа</h1>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="warning-account">
-                            <p>У меня есть учетная запись. <a href="">Войти</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="inter">
-                            <form action="" class="form-inter">
-                                <p>Если вы покупали у нас уже что-то раньше, пожалуйста введите e-mail и пароль. Если вы у нас впервые, то заполните форму "оформление заказа"</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="form-inter__name">Логин или e-mail</label>
-                                        <input type="text" id="form-inter__name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="form-inter__password">Пароль</label>
-                                        <input type="password" id="form-inter__password">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <input class="button" type="submit" value="Войти" id="">
-                                        <input type="checkbox" class="check" id="remember-me-check" checked />
-                                        <label for="remember-me-check">Запомнить меня</label>
-                                        <a href="">Забыли пароль?</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        <ol class="breadcrumb">
+                          <li><a href="#">Личный кабинет</a></li>
+                          <li class="active">Мои заказы</li>
+                        </ol>
+                        <h1 class="page-title">Мои заказы</h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="page-title page-title--h2">Информация для доставки и оплаты заказа</h2>
+                      <h2>Заказы в статусе «Принят, ожидается оплата»</h2>
+                      <p>Заказ принят, но пока не обрабатывается </p>
                     </div>
                 </div>
-
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="customer">
-                            <h3 class="page-title--h3">Информация о покупателе</h3>
-                            <form action="" class="form-customer-info">
-                                <label for="customer-info__name">ФИО</label>
-                                <input type="text" name="" id="customer-info__name">
-                                <label for="customer-info__email">E-mail</label>
-                                <input type="text" name="" id="customer-info__email">
-                                <label for="customer-info__tel">Телефон</label>
-                                <input type="text" name="" id="customer-info__tel">
-                                <label for="customer-info__index">Индекс</label>
-                                <input type="text" name="" id="customer-info__index">
-                                <label for="customer-info__location">Месторасположение</label>
-                                <input type="text" name="" id="customer-info__location">
-                                <label for="customer-info__delivery">Адрес доставки</label>
-                                <textarea name="" id="customer-info__delivery"></textarea>
-                            </form>
-                        </div>
-                    </div> <!--  form-customer-info end -->
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="delivery-method">
-                                    <h3 class="page-title--h3">Содержимое заказа</h3>
-                                    <form action="" class="form-delivery-method">
-                                        <input type="checkbox" class="check" id="pickup-check" checked />
-                                        <label for="pickup-check">Самовывоз - <span>бесплатно</span></label>
-                                        <p>Вы можете самостоятельно забрать товар со склада.</p>
-                                        <input type="checkbox" class="check" id="courier-check" checked />
-                                        <label for="courier-check">Доставка курьером по Москве - 400 руб.</label>
-                                        <p>Осуществляется в течение 3 (трех) рабочих дней</p>
-                                        <input type="checkbox" class="check" id="delivery-service-check" checked />
-                                        <label for="delivery-service-check">Доставка курьерской службой по России.</label>
-                                        <p>Осуществляется в течении 7 (семи) рабочих дней.</p>
-                                    </form>
+                    <div class="col-md-12">
+                        <div class="order-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="order-container__title">
+                                        <div class="col-md-3">
+                                            <h3>Заказ № <span>311123</span></h3><p> от 30.03.2015</p>
+                                        </div>
+                                        <div class="col-md-2 col-md-offset-7 order-container__detail">
+                                              <a href="">Детальный просмотр ></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div> <!-- form-delivery-method end -->
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="payment-method">
-                                    <h3 class="page-title--h3">Способ оплаты</h3>
-                                    <form action="" class="form-payment-method">
+                            <div class="order-container__item">
+                                <div class="row">
+                                    <div class="col-md-7">
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/courier.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-courier-check" checked />
-                                                    <label for="payment-courier-check">Наличные курьеру</label>
-                                                </div>
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Сумма к оплате</p></div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/card.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-card-check" checked />
-                                                    <label for="payment-card-check">Банковские карты</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/e-money.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-e-money-check" checked />
-                                                    <label for="payment-e-money-check">Электронные деньги</label>
-                                                </div>
+                                            <div class="col-md-3">
+                                                <p>50 890 руб.</p>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option payment-method__option--4">
-                                                    <div class="payment-method__img"><img src="img/delivery/terminal.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-terminal-check" checked />
-                                                    <label for="payment-terminal-check">Наличными через пункт приема</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/tel.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-tel-check" checked />
-                                                    <label for="payment-tel-check">Баланс телефона</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/intenet-bank.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-intenet-bank-check" checked />
-                                                    <label for="payment-intenet-bank-check">Интернет-банкинг</label>
-                                                </div>
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Оплачен</p></div>
+                                        </div>
+                                            <div class="col-md-3">
+                                                <p>Нет</p>
                                             </div>
                                         </div>
-
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Способ оплаты</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Наличные курьеру</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Доставка</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Самовывоз</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-3">
+                                        <p>от 30.03.2015</p>
+                                        <p>принят, ожидается оплата</p>
+                                        <button class="button button--grey-fat button--fat"><a href="№">Отменить заказ</a></button>
+                                        <button class="button button--grey-fat button--fat"><a href="№">Повторить заказ</a></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <input type="checkbox" class="check" id="payment-clearing-check" checked />
-                                                <label class="clearing-label" for="payment-clearing-check">Безналичный расчет для юридических лиц</label>
+                                                <h3>Состав заказа</h3>
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div> <!-- form-payment-method end -->
-                    </div>
-                </div> <!--  row end -->
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="page-title--h3">Содержимое заказа</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="order">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="order__title">
-                                        <div class="row">
-                                            <div class="col-md-3 col-md-offset-2"><p>наименование</p></div>
-                                            <div class="col-md-2"><p>цена</p></div>
-                                            <div class="col-md-2"><p>количество</p></div>
-                                            <div class="col-md-1"><p>скидка</p></div>
-                                            <div class="col-md-2">
-                                                <p>сумма</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- order__title end -->
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="order__item">
-                                        <div class="row">
-                                            <div class="col-md-1">
-                                                <div class="order__item__delete">
-                                                    <span class="delete-line">+</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <div class="order__item__img">
-                                                    <img src="img/order__item.png">
-                                                </div>
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
                                             </div>
                                             <div class="col-md-3">
-                                                <div class="order__item__name">
-                                                    <p>OSTYCUT Набор для биопсии кости материал биопсия кости материал биопсия</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="order__item__text ">
-                                                    <p>11 890 руб</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="order__item__quantity">
-                                                    <div class="group">
-  
-                                                      <div class="input-number" min="0" max="100">
-                                                        <input type="text" value="1" />
-                                                        <button class="input-number-increment" data-increment>+</button>
-                                                        <button class="input-number-decrement" data-decrement>-</button>
-                                                      </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <div class="order__item__sale">
-                                                    <p>10%</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="order__item__text order__item__text--sum">
-                                                    <p>127120 руб.</p>
-                                                </div>
+                                                <p>50 890 руб.</p>
                                             </div>
                                         </div>
-
-                                    </div>
-                                </div>
-                            </div> <!-- order__item end -->
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="order__item">
                                         <div class="row">
-                                            <div class="col-md-1">
-                                                <div class="order__item__delete">
-                                                    <span class="delete-line">+</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <div class="order__item__img">
-                                                    <img src="img/order__item.png">
-                                                </div>
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
                                             </div>
                                             <div class="col-md-3">
-                                                <div class="order__item__name">
-                                                    <p>OSTYCUT Набор для биопсии </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="order__item__text ">
-                                                    <p>11 890 руб</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="order__item__quantity">
-                                                    <div class="group">
-  
-                                                      <div class="input-number" min="0" max="100">
-                                                        <input type="text" value="1" />
-                                                        <button class="input-number-increment" data-increment>+</button>
-                                                        <button class="input-number-decrement" data-decrement>-</button>
-                                                      </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-1">
-                                                <div class="order__item__sale">
-                                                    <p>10%</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="order__item__text order__item__text--sum">
-                                                    <p>127120 руб.</p>
-                                                </div>
+                                                <p>Нет</p>
                                             </div>
                                         </div>
-
-                                    </div>
-                                </div>
-                            </div> <!-- order__item end -->
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="order__item order__item--calculate">
-                                        <input class="button" type="submit" value="Пересчитать заказ" id="">
-                                        <input class="button button--not-active" type="submit" value="Оформить заказ" id="">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Наличные курьеру</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="order__item order__item--summ">
-                                    <div class="row">
-                                        <div class="col-md-2 col-md-offset-8 ">
-                                            <p>Сумма:</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="order-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="order-container__title">
+                                        <div class="col-md-3">
+                                            <h3>Заказ № <span>311123</span></h3><p> от 30.03.2015</p>
                                         </div>
-                                        <div class="col-md-2">
-                                            <span>9 000 000, 00 руб.</span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2 col-md-offset-8">
-                                            <p>Скидка:</p>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span>900 000, 00 руб.</span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2 col-md-offset-8">
-                                            <p>Сумма:</p>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span>8 100 000, 00 руб.</span>
+                                        <div class="col-md-2 col-md-offset-7 order-container__detail">
+                                              <a href="">Детальный просмотр ></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div> 
-
+                            <div class="order-container__item">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Сумма к оплате</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>50 890 руб.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Оплачен</p></div>
+                                        </div>
+                                            <div class="col-md-3">
+                                                <p>Нет</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Способ оплаты</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Наличные курьеру</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Доставка</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Самовывоз</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-3">
+                                        <p>от 30.03.2015</p>
+                                        <p>принят, ожидается оплата</p>
+                                        <button class="button button--grey-fat button--fat"><a href="№">Отменить заказ</a></button>
+                                        <button class="button button--grey-fat button--fat"><a href="№">Повторить заказ</a></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h3>Состав заказа</h3>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>50 890 руб.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Нет</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Наличные курьеру</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div> <!-- order end -->
+                </div>
 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="order-container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="order-container__title">
+                                        <div class="col-md-3">
+                                            <h3>Заказ № <span>311123</span></h3><p> от 30.03.2015</p>
+                                        </div>
+                                        <div class="col-md-2 col-md-offset-7 order-container__detail">
+                                              <a href="">Детальный просмотр ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-container__item">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Сумма к оплате</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>50 890 руб.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Оплачен</p></div>
+                                        </div>
+                                            <div class="col-md-3">
+                                                <p>Нет</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Способ оплаты</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Наличные курьеру</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>Доставка</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Самовывоз</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-md-offset-3">
+                                        <p>от 30.03.2015</p>
+                                        <p>принят, ожидается оплата</p>
+                                        <button class="button button--grey-fat button--fat"><a href="№">Отменить заказ</a></button>
+                                        <button class="button button--grey-fat button--fat"><a href="№">Повторить заказ</a></button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h3>Состав заказа</h3>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>50 890 руб.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Нет</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="dotted"><p>OSTYCUT Набор для биопсии кости</p></div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Наличные курьеру</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
     <footer class="page-footer">
         <div class="container">
@@ -567,5 +535,3 @@
             </div>
         </div>
     </footer>
-    
-</body>

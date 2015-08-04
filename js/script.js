@@ -11,41 +11,37 @@ $(window).scroll(function(e){
 
 function parallaxFirst(){
   var scrolled = $(window).scrollTop();
-
   $('.section-preview__bg-girl').css('top',+(scrolled*0.5)+'px');
-
 }
+
 function parallaxSecond(){
   var  scrolledTwo = $(window).scrollTop();
-
   $('.section-shop__img--1').css('top',-(scrolledTwo*0.17)+'px');
   $('.section-shop__img--4').css('top',-(scrolledTwo*0.17)+'px');
 }
 /*PARALLAX section--end*/
-
-/*yandex map*/
 var mapBiops;
 ymaps.ready(function(){
      mapBiops = new ymaps.Map("ya_maps", {
         center: [55.63, 37.64],
         zoom: 15
     });
-    var myPlacemark = new ymaps.Placemark([55.63, 37.64]);
-     mapBiops.geoObjects.add(myPlacemark);
+    var myPlacemark = new ymaps.Placemark(mapBiops.getCenter(),{
+      hintContent: 'ул. Кантемировская, д. 58'
+    })
+    mapBiops.geoObjects.add(myPlacemark);
 });
+$( document ).ready(function() {
+/*yandex map*/
+
 /*yandex map end*/
 
-
-
-$( document ).ready(function() {
 /*search input header*/
     $('#header-search').click(function(){
         $('.header-search__input').toggleClass('fadeInRight');
         $('.header-search__input').toggleClass('fadeOutRight');
     });
 /*search input header end*/
-
-
 
 /*slider*/
 /*logo-carousel*/
@@ -69,7 +65,7 @@ $( document ).ready(function() {
       asNavFor: '#item-carousel-nav'
   });
 
-$('#item-carousel-nav').slick({
+  $('#item-carousel-nav').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
@@ -78,10 +74,25 @@ $('#item-carousel-nav').slick({
   });
 /*item-carousel end*/
 
+/*similar Products*/
+  $('.similar-products').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  });
+/*similar Products end*/
+
+/*slider end*/
+
+/*delete order__item*/
+  $('.delete-line').click(function(){
+      console.log($(this).parent('.order__item'))
+  })
+/*delete order__item end*/
 
 
-/*slider*/
-});
+}); /*g*/
+
 
 
 /*input number*/
@@ -133,7 +144,6 @@ $('#item-carousel-nav').slick({
 
   $.fn.inputNumber.Constructor = InputNumber;
 })(jQuery);
-
 
 jQuery(function ($) {
   $('.input-number').inputNumber();

@@ -24,24 +24,35 @@ span{
     color:@colorText;
 }
 a{
-    color: @colorviolet;
+    color: @colorvioletPrimary;
     text-decoration: underline;
     font-weight: 400;
     &:hover{
-        color: @colorviolet;
+        color: @colorvioletPrimary;
         text-decoration: none;
     }
     &:visited{
-        color: @colorviolet;
+        color: @colorvioletPrimary;
         text-decoration: none;
+    }
+    &:active{
+        color: @colorvioletPrimary;
+    }
+    &:focus{
+        color: @colorvioletPrimary;
     }
 }
 h2{
 
 }
+h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
 label{
     display: block;
-    color: #8f8f8f;
+    color: @colorTextGrey;
     font-size: 1.077em; /* 14 */
     margin-bottom: 10px;
     font-weight: 500;
@@ -53,7 +64,7 @@ input{
     width: 100%;
     padding-left: 10px;
     outline: none;
-    margin-bottom: 10px;
+    margin-bottom: 21px;
 }
 input[type=submit]{
     padding: 0px;
@@ -64,9 +75,11 @@ input[type=submit]{
     padding-left: 1.385em; /* 18 */
     padding-right: 1.385em;
     margin-top: 0px;
+    border-radius: 20px;
     &:hover{
         color: white;
-        background: @colorviolet;
+        background: @colorvioletPrimary;
+
     }
 }
 textarea{
@@ -134,8 +147,25 @@ input[type="checkbox"].check:checked + label:after{
     transition: border-color 200ms linear, border-width 200ms linear;
 }
 /* checkbox end*/
-
+blockquote{
+    border-left: 5px solid @colorviolet;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 28px;
+}
+.warning{
+    background: #e6e0f0;
+    border-left: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 19px;
+}
 .button{
+    outline: none;
     border:none;
     border-radius: 1.154em; /* 15 */
     padding:0em 1.538em; /*20*/
@@ -161,7 +191,7 @@ input[type="checkbox"].check:checked + label:after{
         &:hover{
             background: white;
             & a{
-                color: @colorviolet;
+                color: @colorvioletPrimary;
             }
         }
     }
@@ -178,7 +208,6 @@ input[type="checkbox"].check:checked + label:after{
             }
         }
     }
-
     &--fat{
         border-radius: 2em;
         & a{
@@ -204,8 +233,35 @@ input[type="checkbox"].check:checked + label:after{
             }
         }
     }
+    &--grey{
+        background-color: #ebebeb;
+        margin-right: 3px;
+        & a{
+            color: #747474 !important;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 25px;
+        }
+        &-fat{
+            & a{
+                line-height: 40px;
+                color: #747474;
+            }
+        }
+    }
+    &--violet-border{
+        border: 3px solid #b29fe5;
+        background: white;
+        width: 100%;
+        & a{
+            color: #b29fe5;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
 }
-
 
 .breadcrumb{
     background: none;
@@ -289,16 +345,15 @@ input[type="checkbox"].check:checked + label:after{
         &--summ{
             padding-left: 1.154em;
             font-weight: bold;
-            color: @colorviolet;
+            color: @colorvioletPrimary;
         }
-
         &--card{
             position: relative;
-            z-index: 5;
+            z-index: 200;
             & .badge{
                 position: absolute;
                 background: @colorvioletOpacity;
-                color:@colorviolet ;
+                color:@colorvioletPrimary ;
                 font-weight: normal;
                 top: -9px;
                 left: -12px;
@@ -306,12 +361,15 @@ input[type="checkbox"].check:checked + label:after{
                 padding: 3px 3px;
             }
         }
-
+        &:hover{
+            & .card-submenu{
+                display: block;
+            }
+        }
         & a{
             font-size:1.077em; /* 14px */
-            color: @colorviolet;
+            color: @colorvioletPrimary;
             text-decoration: underline;
-
             &:hover{
                 text-decoration: none;
             }
@@ -320,6 +378,60 @@ input[type="checkbox"].check:checked + label:after{
     & .fa{
         color: @colorviolet;
         padding-right: 3px;
+    }
+}
+.card-submenu{
+    display: none;
+    transition: all 0.3s linear;
+    width: 290px;
+    padding: 20px;
+    padding-top: 0px;
+    position: absolute;
+    left:-50px;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    z-index: 900;
+    text-align: left;
+    & a{
+        text-decoration: none;
+    }
+    & h3{
+        text-align: left;
+        color: @colorviolet;
+        margin-bottom: 0px;
+        line-height: 16px;
+        margin-top: 0px;
+        padding-bottom: 5px;
+    }
+    &__item{
+        border-bottom: 1px solid @borderGrey;
+        padding-bottom: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+        &--info{
+            border-bottom: none;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            & h3{
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    & .button--violet{
+        padding: 0px 15px;
+        & a{
+            color: white;
+            font-size:14px;
+            line-height: 25px;
+        }
+    }
+    & img{
+        width: 50px;
+        height: 50px;
     }
 }
 /* top menu end */
@@ -353,7 +465,7 @@ input[type="checkbox"].check:checked + label:after{
             line-height: 4.286em;
 
             &:hover{
-                color: @colorviolet;
+                color: @colorvioletPrimary;
             }
         }
     }
@@ -369,16 +481,13 @@ input[type="checkbox"].check:checked + label:after{
             font-weight: 700;
             color: @colorText;
         }
-
         &:hover .fa-angle-down{
-            color: @colorviolet;
+            color:@colorvioletPrimary;
         }
-
         &:hover>.main-nav__sub-menu {
             display:block;
         }
     }
-
     &__sub-menu {
         display: none;
         list-style: none;
@@ -393,7 +502,6 @@ input[type="checkbox"].check:checked + label:after{
         text-align: center;
         padding-top: 0.769em;/*  10 */
         padding-bottom: 0.769em;/*  10 */
-
         & a{
             line-height: 1.000em;/*  36 */
             font-size: 0.923em; /* 12 */
@@ -401,7 +509,6 @@ input[type="checkbox"].check:checked + label:after{
             text-transform: none;
         }
     }
-
     &__sub-item{
         text-align: left;
         padding-top: 13px;
@@ -409,9 +516,8 @@ input[type="checkbox"].check:checked + label:after{
         transition: all 0.2s ease;
         width: 170px;
         margin: 0 auto;
-
         &:hover{
-            background: @colorviolet;
+            background:@colorvioletPrimary;
             border-radius: 6px;
             & a{
                 color: white;
@@ -433,7 +539,7 @@ input[type="checkbox"].check:checked + label:after{
             display: inline-block;
         }
         & .fa-search{
-            color: @colorviolet;
+            color: @colorvioletPrimary;
             opacity: 0.4;
             cursor: pointer;
             position: relative;
@@ -447,10 +553,10 @@ input[type="checkbox"].check:checked + label:after{
 
         &__input[type="search"]{
             opacity: 0;
-            width: 200px;
+            width: 300px;
             position: absolute;
             left:-220px;
-            bottom:-9px;
+            bottom: -12px;
             z-index: 101;
             border:1px solid grey;
             padding:0;
@@ -479,10 +585,12 @@ main{
 88 YY 88 dP""""Yb 88 88  Y8     88     dP""""Yb  YboodP 888888  */
 
 .section{
+    margin-bottom:50px;
     &-preview{
         height: 835px;
         background: #f1f1f1;
         position: relative;
+        margin-bottom: 0px;
 
         &__bg-people{
             .absoluteCenterElement;
@@ -557,6 +665,7 @@ main{
         padding-top: 11.538em;
         padding-bottom: 16.154em; /* 210 */
         text-align: center;
+        margin-bottom: 0px;
 
         & p{
             color: white;
@@ -599,7 +708,7 @@ main{
             min-height: 160px;
 
             &:hover{
-                background: @colorviolet;
+                background: @colorvioletPrimary;
             }
 
             & img{
@@ -616,7 +725,7 @@ main{
         background-attachment: fixed;
         background-position: 320px center;
         background-repeat: no-repeat;
-
+        margin-bottom: 0px;
 
         & h2{
             color: #494157;
@@ -712,6 +821,7 @@ main{
         padding-top: 7.385em; /* 96 */
         padding-bottom: 4.615em; /* 60 */
         background-color: #f6f6f6;
+        margin-bottom: 0px;
         & .contact{
             &__text{
                 & h2{
@@ -725,7 +835,7 @@ main{
                         .afterElemet;
                         width: 57px;
                         height: 2px;
-                        background: @colorviolet;
+                        background: @colorvioletPrimary;
                     }
                 }
             }
@@ -770,7 +880,43 @@ main{
             }
         }
     }
+    &-map{
+        margin-bottom: 0px;
+    }
 } /* .section end */
+
+
+/* modal window */
+.modal-dialog{
+    width: 400px;
+    h3{
+        font-size: 20px;
+        color: #2d2d2d;
+        font-family: Open Sans;
+        font-weight: 600;
+        margin-top: 45px;
+        padding-bottom: 10px;
+    }
+    & .modal-my{
+        width: 400px;
+        height: 486px;
+        background-color: white;
+        border: 1px solid #c4c4c4;
+        border-radius: 6px; 
+        text-align: center;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    & .form-madal{
+        text-align: left;
+    }
+    & input[type=submit]{
+        margin-left: 86px;
+    }
+}
+
+/* modal window end */
+
 
 /* 
 8b    d8    db    88 88b 88     88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
@@ -809,6 +955,10 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
     &--h2{
         font-size: 1.538em; /* 20 */
         font-weight: 600;
+        position: relative;
+        &:after{
+            bottom:0px
+        }
     }
     &--h3{
         font-size: 1.231em; /* 16 */
@@ -831,6 +981,14 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
         font-size: 1.077em; /* 14 */
         line-height: 3.214em; /* 45 */
         margin-bottom: 0px;
+    }
+}
+.basic-info-price{
+    padding-bottom: 30px;
+    & .button--green{
+        margin-top: 0px;
+        position: relative;
+        bottom: 5px;
     }
 }
 .form-inter{
@@ -895,7 +1053,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
 .order{
     border: 1px solid @borderGrey;
     border-radius: 4px;
-
     &__title{
         text-align: center;
         border-bottom: 1px solid @borderGrey;
@@ -907,7 +1064,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
             line-height: 2.571em;
         }
     }
-
     &__item{
         box-sizing: border-box;
         text-align: center;
@@ -937,14 +1093,12 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
                 cursor: pointer;
                 position: relative;
                 top:6px;
-
                 &:hover{
                     background: red;
                     color: white;
                 }
             }
         }
-
         &__img{
             line-height: 6.923em; /* 90 */
             vertical-align:middle;
@@ -967,8 +1121,39 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
                 color: @colorviolet;
             }
         }
-        &__quantity{
-            
+        &--calculate{
+            text-align: right;
+            border-bottom: none;
+            & input[type=submit]{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                font-weight: 600;
+            }
+            .button--not-active{
+                background: none;
+                border: 1px solid #d6d6d6;
+                cursor: default;
+                color: #ababab;
+                &:hover{
+                    background: none;
+                    border: 1px solid @borderGrey;
+                    cursor: default;
+                    color: @borderGrey;
+                }
+            }
+        }
+        &--summ{
+            text-align: right;
+            margin-top: 35px;
+            border-bottom: none;
+            & span{
+                color: @colorviolet;
+                font-size: 1.231em;
+                font-weight: 600;
+                margin-bottom: 8px;
+                display: inline-block;
+            }
         }
 
 .group {
@@ -1003,7 +1188,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
     box-sizing: border-box;
     background-color: @colorvioletOpacity;
     border: 0;
-    color: @colorviolet;
+    color: @colorvioletPrimary;
     font-weight: bold;
     cursor: pointer;
     display: block;
@@ -1035,7 +1220,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
         background: #a68cd5;
     }
 }
-
         &__sale{
             line-height: 6.923em; /* 90 */
             vertical-align:middle;
@@ -1088,7 +1272,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
             }
         }
     }
-
     & .comments-container {
         margin-top: 0.769em;
         margin-left: 0.769em;
@@ -1125,7 +1308,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
             display: inline-block;
             font-size: 1.154em;
             font-weight: 700;
-            color: @colorviolet;
+            color: @colorvioletPrimary;
             & span{
                 color: @colorTextGrey;
                 font-size: 0.867em;
@@ -1135,7 +1318,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
         }
         & .blog-comment-date{
             display: inline-block;
-            color: @colorviolet;
+            color: @colorvioletPrimary;
             font-size: 0.846em;
         }
     }
@@ -1196,16 +1379,15 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
 
 .rating-star{
     display: inline-block;
+    background: url('img/sprites.png') no-repeat -442px 0;
     width: 15px;
-    height: 15px;
-    background: url('img/sprite-star.png') no-repeat;
-    background-position: 0 0px;
-
+    height: 14px;
     &--active{
-        background-position: 0 -15px;
+        background: url('img/sprites.png') no-repeat -442px -15px;
+        width: 15px;
+        height: 14px;
     }
 }
-
 /* rating end */
 .table-buy{
     table {
@@ -1260,21 +1442,274 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
                 position: absolute;
                 display: inline-block;
                 width: 34px;
-                height: 25px;
+                height: 26px;
                 padding-top: 3px;
                 background-color: white;
                 background-image: linear-gradient(to top, rgba(201, 201, 201, 0.92) 0%, rgba(243, 243, 243, 0.92) 100%);
                 border: 1px solid #b8b8b8;
-                top: -17px;
+                top: -18px;
                 left: -33px;
             }
         }
         
     }
 }
+/* sidebar */
+.sidebar{
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    & h3{
+        padding-left: 0.625em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid green;
+        margin-bottom: 0px;
+    }
+}
+.accordion{
+    &__title{
+        font-weight: 700;
+        & a{
+            background: @colorvioletBGOpacity;
+            display: inline-block;
+            font-size: 1.077em; /* 14 */
+            font-weight: 700;
+            padding-left: 42px;
+            text-decoration: none;
+            width: 100%;
+            line-height: 45px;
+            position: relative;
+            &:hover{
+                background: @colorvioletBGOpacity;
+            }
+            &:after{
+                content:'>';
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 10px;
+                transform: rotate(90deg);
+                transition: all 0.2s linear;
+            }
+        }
+        & .collapsed{
+            background: none;
+            &:after{
+                transform: rotate(0deg);
+            }
+        }
+        & i{
+            display: inline-block;
+            position: absolute;
+            top: 25%;
+            left: 11px;
+        }
+    }
+    &__inner{
+        & a{
+            display: block;
+        }
+    }
+}
+.accordion-sub{
+    &__title{
+        & a{
+            color: @colorText;
+            font-weight: 700;
+            font-size: 1em;
+            text-decoration: none;
+            padding-left: 10px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            border-bottom: 1px solid @borderGrey;
+            position: relative;
+            &:after{
+                content:'>';
+                display: block;
+                position: absolute;
+                top: 32%;
+                right: 10px;
+                transform: rotate(90deg);
+                transition: all 0.2s linear;
+            }
+        }
+        & .collapsed{
+            background: none;
+            &:after{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &__inner{
+        & a{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            color: @colorText;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            &:hover{
+                color: @colorGreen;
+            }
+        }
+    }
+    &--active{
+        color: @colorGreen !important;
+    }
+    & .panel-body{
+        border-bottom: 1px solid @borderGrey;
+        padding-bottom: 10px;
+    }
+}
+.panel-body {
+    padding: 0px;
+}
+.accordion{
+    &--biopsy{
+        & i{
+            background: url(img/sprites.png) no-repeat -241px 0;
+            width: 17px;
+            height: 25px;
+        }
+    }
+    &--mammalogy{
+        & i{
+            background: url(img/sprites.png) no-repeat -260px 0;
+            width: 16px;
+            height: 21px;
+        }
+    }
+    &--gynecology{
+        & i{
+            background: url(img/sprites.png) no-repeat -277px 0;
+            width: 21px;
+            height: 21px;
+        }
+    }
+    &--urology{
+        & i{
+            background: url(img/sprites.png) no-repeat -300px 0;
+            width: 23px;
+            height: 26px;
+        }
+    }
+    &--vertebroplasty{
+        & i{
+            background: url(img/sprites.png) no-repeat -324px 0;
+            width: 18px;
+            height: 23px;
+        }
+    }
+    &--kyphoplasty{
+        & i{
+            background: url(img/sprites.png) no-repeat -344px 0;
+            width: 16px;
+            height: 22px;
+        }
+    }
+    &--discotomy{
+        & i{
+            background: url(img/sprites.png) no-repeat -361px 0;
+            width: 16px;
+            height: 22px;
+        }
+    }
+    &--arthroscopy{
+        & i{
+            background: url(img/sprites.png) no-repeat -379px 0;
+            width: 21px;
+            height: 23px;
+        }
+    }
+}
+/* accordion end */
 
+.similar-products {
+    margin-bottom: 150px;
 
+    & .slick-slide {
+        outline: none;
+    }
+    & .slick-prev {
+        outline: none;
+        border-radius: 4px;
+        z-index: 100;
+        opacity: 0.6;
+        border: none;
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        background-color: #686aad;
+        top: 46%;
+        &:hover{
+            opacity: 1;
+        }
+        & i {
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 7px 0;
+            border-color: transparent white transparent transparent;
+            position: relative;
+            left: 36%;
+        }
+    }
+    & .slick-next {
+        outline: none;
+        border-radius: 4px;
+        z-index: 100;
+        opacity: 0.6;
+        border: none;
+        position: absolute;
+        right: 0px;
+        width: 44px;
+        height: 44px;
+        background-color: #686aad;
+        top: 46%;
+        &:hover{
+            opacity: 1;
+        }
+        & i {
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 0 7px 7px;
+            border-color: transparent transparent transparent white;
+            position: relative;
+            left: 45%;
+        }
+    }
+    & img{
+        border:1px solid @borderGrey;
+    }
+    & .page-title--h3{
+        width: 80%;
+        margin-bottom: 0px;
+        padding-bottom: 5px;
+        margin-top: 5px;
+    }
+    & p{
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: line-through;
+        display: inline-block;
+    }
+    & span{
+        color: @colorvioletPrimary;
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: none;
+        display: inline-block;
+        padding-left: 5px;
+    }
+}
 
+/* sidebar end */
 
 .basic-info-container{
     margin-bottom: 6.154em;
@@ -1284,7 +1719,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
         font-weight: 700;
         font-size: 2.308em; /* 30 */
         line-height: 0.667em; /* 20 */
-        color: @colorviolet;
+        color: @colorvioletPrimary;
     }
 }
 .item-carousel{
@@ -1346,10 +1781,10 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
 
 .nav-tabs-basic{
     & .nav-tabs{
-        background-color: @colorvioletOpacity;
+        background-color: #beaee8;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
-        border-bottom:2px solid @colorvioletOpacity;
+        border-bottom:2px solid #beaee8;
         & > li > a {
             border-radius: 0px;
             line-height: 3.067em; /* 46 */
@@ -1370,17 +1805,17 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
             }
         }
         & > li.active > a{
-            background: @colorviolet;
+            background: @colorvioletPrimary;
             color: white;
             &:hover{
-                background: @colorviolet;
+                background: @colorvioletPrimary;
                 border-radius: 0px;
                 border:none;
                 color: white;
                 outline: none;
             }
             &:focus{
-                background: @colorviolet;
+                background: @colorvioletPrimary;
             }
         }
         & > li > a:focus{
@@ -1399,6 +1834,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
         }
     } 
 }
+
 
 .nav-tabs-basic--second{
     & .nav-tabs{
@@ -1421,6 +1857,661 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
 88__dP   dPYb   dP   `" 88__       dP   `"   dPYb   88__dP  8I  Yb     88__   88Yb88  8I  Yb 
 88"""   dP__Yb  Yb  "88 88""       Yb       dP__Yb  88"Yb   8I  dY     88""   88 Y88  8I  dY 
 88     dP""""Yb  YboodP 888888      YboodP dP""""Yb 88  Yb 8888Y"      888888 88  Y8 8888Y"   */
+
+/* 
+88      dP"Yb   dP""b8 88 88b 88     88""Yb    db     dP""b8 888888 
+88     dP   Yb dP   `" 88 88Yb88     88__dP   dPYb   dP   `" 88__   
+88  .o Yb   dP Yb  "88 88 88 Y88     88"""   dP__Yb  Yb  "88 88""   
+88ood8  YbodP   YboodP 88 88  Y8     88     dP""""Yb  YboodP 888888  */
+.inter-social{
+    & p{
+        font-size: 12px;
+        color: @colorTextGrey;
+    }
+}
+.soc-vk{
+    display: inline-block;
+    background: url(img/sprites.png) no-repeat 0 -100px;
+    width: 119px;
+    height: 33px;
+    transition: all 0.2s linear;
+    &:hover{
+        background: url(img/sprites.png)  no-repeat 0 -65px;
+        width: 119px;
+        height: 33px;
+    }
+}
+.soc-fb{
+    display: inline-block;
+    background: url(img/sprites.png) no-repeat -123px -100px;
+    width: 114px;
+    height: 33px;
+    transition: all 0.2s linear;
+    &:hover{
+        background: url(img/sprites.png)  -123px -65px;
+        width: 114px;
+        height: 33px;
+    }
+}
+.soc-od{
+    display: inline-block;
+    background: url(img/sprites.png) no-repeat -341px -100px;
+    width: 144px;
+    height: 33px;
+    transition: all 0.2s linear;
+    &:hover{
+        background: url(img/sprites.png) -341px -65px;
+        width: 144px;
+        height: 33px;
+    }
+}
+.soc-tw{
+    display: inline-block;
+    background: url(img/sprites.png) no-repeat -241px -100px;
+    width: 96px;
+    height: 33px;
+    transition: all 0.2s linear;
+    &:hover{
+        background: url(img/sprites.png) -241px -65px;
+        width: 96px;
+        height: 33px;
+    }
+}
+/* 
+88      dP"Yb   dP""b8 88 88b 88     88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
+88     dP   Yb dP   `" 88 88Yb88     88__dP   dPYb   dP   `" 88__       88__   88Yb88  8I  Yb 
+88  .o Yb   dP Yb  "88 88 88 Y88     88"""   dP__Yb  Yb  "88 88""       88""   88 Y88  8I  dY 
+88ood8  YbodP   YboodP 88 88  Y8     88     dP""""Yb  YboodP 888888     888888 88  Y8 8888Y"   */
+
+/* 
+ dP""b8  dP"Yb  88b 88 888888    db     dP""b8 888888     88""Yb    db     dP""b8 888888 
+dP   `" dP   Yb 88Yb88   88     dPYb   dP   `"   88       88__dP   dPYb   dP   `" 88__   
+Yb      Yb   dP 88 Y88   88    dP__Yb  Yb        88       88"""   dP__Yb  Yb  "88 88""   
+ YboodP  YbodP  88  Y8   88   dP""""Yb  YboodP   88       88     dP""""Yb  YboodP 888888 
+ */
+.contact-info{
+    text-align: center;
+    margin-top: 65px;
+    & p{
+        font-size: 16px;
+    }
+    &__item{
+        border-bottom: 1px solid @borderGrey;
+    }
+}
+.form-feedback{
+    text-align: left;
+}
+/* 
+ dP""b8  dP"Yb  88b 88 888888    db     dP""b8 888888     88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
+dP   `" dP   Yb 88Yb88   88     dPYb   dP   `"   88       88__dP   dPYb   dP   `" 88__       88__   88Yb88  8I  Yb 
+Yb      Yb   dP 88 Y88   88    dP__Yb  Yb        88       88"""   dP__Yb  Yb  "88 88""       88""   88 Y88  8I  dY 
+ YboodP  YbodP  88  Y8   88   dP""""Yb  YboodP   88       88     dP""""Yb  YboodP 888888     888888 88  Y8 8888Y"  
+ */
+/* 
+88b 88 888888 Yb        dP .dP"Y8     88""Yb    db     dP""b8 888888 
+88Yb88 88__    Yb  db  dP  `Ybo."     88__dP   dPYb   dP   `" 88__   
+88 Y88 88""     YbdPYbdP   o.`Y8b     88"""   dP__Yb  Yb  "88 88""   
+88  Y8 888888    YP  YP    8bodP'     88     dP""""Yb  YboodP 888888  */
+.news-container{
+    border: 1px solid @borderGrey;
+    border-radius: 4px;
+    color: @colorTextGrey;
+    margin-bottom: 30px;
+    & img{
+        width: 100%;
+        height: auto;
+    }
+    & p{
+        color: @colorTextGrey;
+    }
+    & a{
+        text-decoration: none;
+    }
+    & h3{
+        color: @colorviolet;
+        margin-top: 0px;
+        font-size: 20px;
+    }
+    &__info{
+        padding-top: 0px;
+        padding: 15px;
+        background: white;
+    }
+    &__comments{
+        display: inline-block;
+        position: relative;
+        padding: 5px;
+        border: 1px solid @borderGrey;
+        border-radius: 2px;
+        & span{
+            color: @colorviolet;
+            font-weight: 600;
+            padding-left: 26px;
+        }
+        & i{
+            display: inline-block;
+            position: absolute;
+            bottom: 3px;
+            background: url('img/sprites.png') no-repeat -402px 0;
+            width: 19px;
+            height: 18px;
+        }
+    }
+    &__date{
+        padding: 5px;
+        display: inline-block;
+        border: 1px solid @borderGrey;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
+    
+}
+/* 
+88b 88 888888 Yb        dP .dP"Y8     88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
+88Yb88 88__    Yb  db  dP  `Ybo."     88__dP   dPYb   dP   `" 88__       88__   88Yb88  8I  Yb 
+88 Y88 88""     YbdPYbdP   o.`Y8b     88"""   dP__Yb  Yb  "88 88""       88""   88 Y88  8I  dY 
+88  Y8 888888    YP  YP    8bodP'     88     dP""""Yb  YboodP 888888     888888 88  Y8 8888Y"   */
+
+
+
+
+/* 
+88b 88 888888 Yb        dP .dP"Y8     8888b.  888888 888888    db    88 88         88""Yb    db     dP""b8 888888 
+88Yb88 88__    Yb  db  dP  `Ybo."      8I  Yb 88__     88     dPYb   88 88         88__dP   dPYb   dP   `" 88__   
+88 Y88 88""     YbdPYbdP   o.`Y8b      8I  dY 88""     88    dP__Yb  88 88  .o     88"""   dP__Yb  Yb  "88 88""   
+88  Y8 888888    YP  YP    8bodP'     8888Y"  888888   88   dP""""Yb 88 88ood8     88     dP""""Yb  YboodP 888888  */
+
+
+.news-item{
+    & p{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    & h2{
+        font-size: 20px;
+
+    }
+    & .inter-social{
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-top: 1px solid @borderGrey;
+    }
+}
+.add-comment{
+    border: 2px solid @borderGrey;
+    padding-left: 40px;
+    padding-right: 40px;
+    & p{
+        font-size: 12px;
+        color: @colorTextGrey;
+        font-weight: 500;
+    }
+    & legend{
+        text-align: center;
+        border-bottom: none;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: @colorText;
+        position: relative;
+        font-weight: 700;
+        bottom: 12px;
+        background-color: white;
+    }
+    & textarea{
+        height: 12em;
+    }
+    & input[type=submit]{
+        float: right;  
+    }
+}
+
+.sidebar-news{
+    & h3{
+        width: 100%;
+        border-bottom: 1px solid @borderGrey;
+        padding-bottom: 10px;
+        padding-left: 28px;
+        
+        &:before{
+            content: "";
+            display: block;
+            position: relative;
+            background: url(img/sprites.png) no-repeat -423px 0;
+            width: 17px;
+            height: 13px;
+            left: -28px;
+            top: 16px;
+        }
+        &:after{
+            content: "";
+            display: block;
+            position: relative;
+            width: 57px;
+            height: 2px;
+            background: #3f8c60;
+            bottom: -11px;
+            left: -28px;
+        }
+    }
+    & ul{
+        & li{
+            list-style: none;
+            border-bottom: 1px solid @borderGrey;
+            & a{
+                color:@colorvioletPrimary;
+                font-size: 1.077em; /* 14 */
+                text-decoration: none;
+                line-height: 2.857em;
+            }
+        }
+    }
+}
+.next-news{
+    background: #f2f2f2;
+}
+/* 
+88b 88 888888 Yb        dP .dP"Y8     8888b.  888888 888888    db    88 88         88""Yb    db     dP""b8 888888     888888 88b 88 8888b.  
+88Yb88 88__    Yb  db  dP  `Ybo."      8I  Yb 88__     88     dPYb   88 88         88__dP   dPYb   dP   `" 88__       88__   88Yb88  8I  Yb 
+88 Y88 88""     YbdPYbdP   o.`Y8b      8I  dY 88""     88    dP__Yb  88 88  .o     88"""   dP__Yb  Yb  "88 88""       88""   88 Y88  8I  dY 
+88  Y8 888888    YP  YP    8bodP'     8888Y"  888888   88   dP""""Yb 88 88ood8     88     dP""""Yb  YboodP 888888     888888 88  Y8 8888Y"  
+ */
+
+/* 
+.dP"Y8 88""Yb 88 .dP"Y8  dP"Yb  88  dP     8888P    db    88  dP    db    8888P  dP"Yb  Yb    dP 
+`Ybo." 88__dP 88 `Ybo." dP   Yb 88odP        dP    dPYb   88odP    dPYb     dP  dP   Yb  Yb  dP  
+o.`Y8b 88"""  88 o.`Y8b Yb   dP 88"Yb       dP    dP__Yb  88"Yb   dP__Yb   dP   Yb   dP   YbdP   
+8bodP' 88     88 8bodP'  YbodP  88  Yb     d8888 dP""""Yb 88  Yb dP""""Yb d8888  YbodP     YP     */
+.section-list{
+    & h2{
+        font-size: 21px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-weight: 600;
+    }
+    & p{
+        font-size: 14px;
+    }
+}
+.order-container{
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    margin-bottom: 40px;
+
+    &__title{
+        height: 45px;
+        background: @colorviolet;
+        padding-left: 11px;
+        & h3{
+            display: inline-block;
+            line-height: 45px;
+            color: white;
+            margin: 0px;
+        }
+        & span{
+            color: white;
+        }
+        & p{
+            display: inline-block;
+            line-height: 45px;
+            color: white;
+            margin: 0px;
+            padding-left: 10px;
+        }
+        & a{
+            text-decoration: none;
+            color: white;
+            line-height: 45px;
+        }
+    }
+    &__detail{
+        background: @colorvioletPrimary;
+        padding-right: 0px;
+        text-align: center;
+        padding-left: 0px;
+    }
+    &__item{
+        padding: 25px 15px 35px 25px;
+        & h3{
+            margin-top: 50px;
+        }
+        & .col-md-9{
+            padding-right: 3px;
+        }
+        & .col-md-3{
+            padding-left: 0px;
+        }
+        & .col-md-2{
+            padding-left: 0px;
+        }
+    }
+}
+.dotted{
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    width: 100%;
+    position: relative;
+    bottom: 17px;
+    & p{
+        display: inline-block;
+        position: relative;
+        top: 11px;
+        background: white;
+        margin-bottom: 0px;
+        line-height: 32px;
+    }
+}
+/* 
+.dP"Y8 88""Yb 88 .dP"Y8  dP"Yb  88  dP     8888P    db    88  dP    db    8888P  dP"Yb  Yb    dP     888888 88b 88 8888b.  
+`Ybo." 88__dP 88 `Ybo." dP   Yb 88odP        dP    dPYb   88odP    dPYb     dP  dP   Yb  Yb  dP      88__   88Yb88  8I  Yb 
+o.`Y8b 88"""  88 o.`Y8b Yb   dP 88"Yb       dP    dP__Yb  88"Yb   dP__Yb   dP   Yb   dP   YbdP       88""   88 Y88  8I  dY 
+8bodP' 88     88 8bodP'  YbodP  88  Yb     d8888 dP""""Yb 88  Yb dP""""Yb d8888  YbodP     YP        888888 88  Y8 8888Y"   */
+
+
+/* 
+ dP""b8    db    888888    db    88      dP"Yb   dP""b8 
+dP   `"   dPYb     88     dPYb   88     dP   Yb dP   `" 
+Yb       dP__Yb    88    dP__Yb  88  .o Yb   dP Yb  "88 
+ YboodP dP""""Yb   88   dP""""Yb 88ood8  YbodP   YboodP  */
+.catalog{
+    &__description{
+        margin-bottom: 50px;
+        & p{
+            font-size: 16px;
+        }
+    }
+    &-accordion{
+        & .panel{
+            box-shadow: none;
+        }
+        & .panel-heading{
+            background: @colorvioletPrimary;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 0px;
+            padding-left: 25px;
+            border-radius: 4px;
+        }
+        & .panel-title{
+            & a{
+                font-size: 24px;
+                font-weight: 700;
+                color: white;
+                text-decoration: none;
+                line-height: 49px;
+                &:after{
+                    box-sizing: border-box;
+                    content: "-";
+                    padding-bottom: 3px;
+                    background: #5b4089;
+                    line-height: 46px;
+                    text-align: center;
+                    display: inline-block;
+                    position: relative;
+                    width: 50px;
+                    float: right;
+                    border-bottom-right-radius: 4px;
+                    border-top-right-radius: 4px;
+                }
+            }
+            & .collapsed {
+                &:after{
+                    content:"+";
+                    padding-bottom: 0px;
+                    background: #886fb2;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+    &__body{
+            padding-left: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid @borderGrey;
+        }
+    &__brend{
+        & .catalog__title-item{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        & .catalog__title-brend{
+            display: inline-block;
+            border-radius: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-left: 5px;
+            & a{
+                color: white;
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-decoration: none;
+                line-height: 22px;
+            }
+        }
+        & span{
+            font-size: 13px;
+            font-weight: 400;
+            color: #a7a7a7;
+        }
+    }
+    &__brend--bard{
+        & .catalog__title-item{
+            color: @colorGreen;
+        }
+        & .catalog__title-brend{
+            background: @colorGreen;
+        }
+    }
+    &__brend--gta{
+        & .catalog__title-item{
+            color: @colorvioletPrimary;
+        }
+        & .catalog__title-brend{
+            background: @colorvioletPrimary;
+        }
+    }
+
+}
+
+/* 
+ dP""b8    db    888888    db    88      dP"Yb   dP""b8     888888 88b 88 8888b.  
+dP   `"   dPYb     88     dPYb   88     dP   Yb dP   `"     88__   88Yb88  8I  Yb 
+Yb       dP__Yb    88    dP__Yb  88  .o Yb   dP Yb  "88     88""   88 Y88  8I  dY 
+ YboodP dP""""Yb   88   dP""""Yb 88ood8  YbodP   YboodP     888888 88  Y8 8888Y"   */
+
+
+/* 
+88     88  dP 
+88     88odP  
+88  .o 88"Yb  
+88ood8 88  Yb  */
+.section-lk{
+    & p{
+        font-size: 14px;
+    }
+    & a{
+        display: block;
+        text-decoration: none;
+        color: @colorText;
+        font-size: 14px;
+    }
+    & h2{
+        font-size: 20px;
+        margin-top: 25px;
+    }
+}
+/* 
+88     88  dP     888888 88b 88 8888b.  
+88     88odP      88__   88Yb88  8I  Yb 
+88  .o 88"Yb      88""   88 Y88  8I  dY 
+88ood8 88  Yb     888888 88  Y8 8888Y"   */
+
+/* 
+8888b.  888888 888888    db    88 88          dP"Yb  88""Yb 8888b.  888888 88""Yb 
+ 8I  Yb 88__     88     dPYb   88 88         dP   Yb 88__dP  8I  Yb 88__   88__dP 
+ 8I  dY 88""     88    dP__Yb  88 88  .o     Yb   dP 88"Yb   8I  dY 88""   88"Yb  
+8888Y"  888888   88   dP""""Yb 88 88ood8      YbodP  88  Yb 8888Y"  888888 88  Yb 
+ */
+.section-detail-order{
+    & .col-md-5{
+        padding-right: 0px;
+    }
+    & .col-md-7{
+        padding-left: 0px;
+    }
+    & h3{
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+}
+.detail-order__container{
+    margin-bottom: 45px;
+}
+ /* 
+ 8888b.  888888 888888    db    88 88          dP"Yb  88""Yb 8888b.  888888 88""Yb     888888 88b 88 8888b.  
+ 8I  Yb 88__     88     dPYb   88 88         dP   Yb 88__dP  8I  Yb 88__   88__dP     88__   88Yb88  8I  Yb 
+ 8I  dY 88""     88    dP__Yb  88 88  .o     Yb   dP 88"Yb   8I  dY 88""   88"Yb      88""   88 Y88  8I  dY 
+ 8888Y"  888888   88   dP""""Yb 88 88ood8      YbodP  88  Yb 8888Y"  888888 88  Yb     888888 88  Y8 8888Y"  
+ */
+/* 
+ 88""Yb 888888  dP""b8 88 .dP"Y8 888888 88""Yb    db    888888 88  dP"Yb  88b 88 
+ 88__dP 88__   dP   `" 88 `Ybo."   88   88__dP   dPYb     88   88 dP   Yb 88Yb88 
+ 88"Yb  88""   Yb  "88 88 o.`Y8b   88   88"Yb   dP__Yb    88   88 Yb   dP 88 Y88 
+ 88  Yb 888888  YboodP 88 8bodP'   88   88  Yb dP""""Yb   88   88  YbodP  88  Y8  */
+.form-registration{
+    & p{
+        color: @colorTextGrey;
+    }
+    &__captha{
+        & p{
+            font-size: 1.077em;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        & img{
+            margin-bottom: 10px;
+        }
+    }
+}
+/* 
+88""Yb 888888  dP""b8 88 .dP"Y8 888888 88""Yb    db    888888 88  dP"Yb  88b 88     888888 88b 88 8888b.  
+88__dP 88__   dP   `" 88 `Ybo."   88   88__dP   dPYb     88   88 dP   Yb 88Yb88     88__   88Yb88  8I  Yb 
+88"Yb  88""   Yb  "88 88 o.`Y8b   88   88"Yb   dP__Yb    88   88 Yb   dP 88 Y88     88""   88 Y88  8I  dY 
+88  Yb 888888  YboodP 88 8bodP'   88   88  Yb dP""""Yb   88   88  YbodP  88  Y8     888888 88  Y8 8888Y"   */
+
+/* 
+ dP""b8    db    888888    db    88      dP"Yb   dP""b8     88 888888 888888 8b    d8 .dP"Y8 
+dP   `"   dPYb     88     dPYb   88     dP   Yb dP   `"     88   88   88__   88b  d88 `Ybo." 
+Yb       dP__Yb    88    dP__Yb  88  .o Yb   dP Yb  "88     88   88   88""   88YbdP88 o.`Y8b 
+ YboodP dP""""Yb   88   dP""""Yb 88ood8  YbodP   YboodP     88   88   888888 88 YY 88 8bodP'  */
+
+.catalog-items{
+    &__container{
+        margin-bottom: 60px;
+    }
+    &__title{
+        & a{
+            font-size: 18px;
+            font-weight: 700;
+            color: #313131;
+            margin-bottom: 20px;
+            text-decoration: none;
+            &:hover{
+                color: #624c9b;
+            }
+        }
+    }
+    &__list{
+        & li{
+            list-style: none;
+            padding-bottom: 13px;
+            position: relative;
+            &:before{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                background: url('img/sprites.png') no-repeat -36px 0;
+                width: 10px;
+                height: 8px;
+                margin-right: 5px;
+                top: 5px;
+                left: -14px;
+            }
+            & a{
+                color: #6a6a6a;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                text-decoration: none;
+                &:hover{
+                    color: #624c9b;
+                }
+            }
+        }
+    }
+    &__icon{
+        margin-left: 15px;
+        display: block;
+        position: relative;
+        &--biopsy{
+            background: url('img/sprites.png') no-repeat -1px -134px;
+            width: 45px;
+            height: 69px;
+        }
+        &--mammalogy{
+            background: url('img/sprites.png') no-repeat -50px -134px;
+            width: 48px;
+            height: 63px;
+        }
+        &--urology{
+            background: url('img/sprites.png') no-repeat -101px -134px;
+            width: 60px;
+            height: 67px;
+            left: -12px;
+        }
+        &--gynecology{
+            background: url('img/sprites.png') no-repeat -163px -134px;
+            width: 64px;
+            height: 64px;
+            left: -15px;
+        }
+        &--vertebroplasty{
+            background: url('img/sprites.png') no-repeat -230px -134px;
+            width: 55px;
+            height: 72px;
+        }
+        &--kyphoplasty{
+            background: url('img/sprites.png') no-repeat -289px -134px;
+            width: 54px;
+            height: 72px;
+        }
+        &--discotomy{
+            background: url('img/sprites.png') no-repeat -345px -134px;
+            width: 51px;
+            height: 72px;
+            left: -10px;
+        }
+        &--arthroscopy{
+            background: url('img/sprites.png') no-repeat -399px -134px;
+            width: 60px;
+            height: 67px;
+            left: -9px;
+        }
+
+        
+    }
+}
+
+/* 
+ dP""b8    db    888888    db    88      dP"Yb   dP""b8     88 888888 888888 8b    d8 .dP"Y8     888888 88b 88 8888b.  
+dP   `"   dPYb     88     dPYb   88     dP   Yb dP   `"     88   88   88__   88b  d88 `Ybo."     88__   88Yb88  8I  Yb 
+Yb       dP__Yb    88    dP__Yb  88  .o Yb   dP Yb  "88     88   88   88""   88YbdP88 o.`Y8b     88""   88 Y88  8I  dY 
+ YboodP dP""""Yb   88   dP""""Yb 88ood8  YbodP   YboodP     88   88   888888 88 YY 88 8bodP'     888888 88  Y8 8888Y"   */
+
 /* 
  dP""b8  dP"Yb  88b 88 888888 888888 88b 88 888888     888888 88b 88 8888b.  
 dP   `" dP   Yb 88Yb88   88   88__   88Yb88   88       88__   88Yb88  8I  Yb 
@@ -1485,7 +2576,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
                 line-height: 3em;
                 vertical-align: top;
             }
-
             & i{
                 display: inline-block;
                 vertical-align: middle;
@@ -1493,7 +2583,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
                 height: 26px;
                 margin-right: 15px;
             }
-
             & .page-footer__item:nth-child(1) i{
                 background: url(img/social_icon/vk.svg) no-repeat;
             }
@@ -1508,7 +2597,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
             }
         }
     }
-
     &__buttom{
         border-top: 1px solid #6c6576;
         color:white;
@@ -1517,7 +2605,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
         line-height: 1.167em;
         padding-top: 1.667em;
         padding-bottom: 1.667em;
-
         p{
             margin-bottom: 0px;
         }
@@ -1525,8 +2612,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
     &__copyright{
         color: white
     }
-
-
 }
 
 .logo-carousel{
@@ -1538,12 +2623,10 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
     position: relative;
     padding-top: 15px;
     padding-bottom: 15px;
-
     & .owl-controls{
         position: absolute;
         top: 43%;
         right: 1.5%;
-
         .owl-nav{
             & .owl-next{
                 width: 0;

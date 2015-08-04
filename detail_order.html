@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Biopsy - оформление заказа</title>
+    <title>Biopsy - Детали заказа</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- fonts -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -156,163 +156,178 @@
     </header>
     <main>
 
-        <section class="section">
+        <section class="section section-detail-order">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="page-title">Оформление заказа</h1>
+                        <ol class="breadcrumb">
+                          <li><a href="#">Личный кабинет</a></li>
+                          <li class="active">Заказ № 321123</li>
+                        </ol>
+                        <h1 class="page-title">Заказ № 321123</h1>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="warning-account">
-                            <p>У меня есть учетная запись. <a href="">Войти</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="inter">
-                            <form action="" class="form-inter">
-                                <p>Если вы покупали у нас уже что-то раньше, пожалуйста введите e-mail и пароль. Если вы у нас впервые, то заполните форму "оформление заказа"</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="form-inter__name">Логин или e-mail</label>
-                                        <input type="text" id="form-inter__name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="form-inter__password">Пароль</label>
-                                        <input type="password" id="form-inter__password">
-                                    </div>
+                        <div class="detail-order__container">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Текущий статус</p></div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <input class="button" type="submit" value="Войти" id="">
-                                        <input type="checkbox" class="check" id="remember-me-check" checked />
-                                        <label for="remember-me-check">Запомнить меня</label>
-                                        <a href="">Забыли пароль?</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="page-title page-title--h2">Информация для доставки и оплаты заказа</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="customer">
-                            <h3 class="page-title--h3">Информация о покупателе</h3>
-                            <form action="" class="form-customer-info">
-                                <label for="customer-info__name">ФИО</label>
-                                <input type="text" name="" id="customer-info__name">
-                                <label for="customer-info__email">E-mail</label>
-                                <input type="text" name="" id="customer-info__email">
-                                <label for="customer-info__tel">Телефон</label>
-                                <input type="text" name="" id="customer-info__tel">
-                                <label for="customer-info__index">Индекс</label>
-                                <input type="text" name="" id="customer-info__index">
-                                <label for="customer-info__location">Месторасположение</label>
-                                <input type="text" name="" id="customer-info__location">
-                                <label for="customer-info__delivery">Адрес доставки</label>
-                                <textarea name="" id="customer-info__delivery"></textarea>
-                            </form>
-                        </div>
-                    </div> <!--  form-customer-info end -->
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="delivery-method">
-                                    <h3 class="page-title--h3">Содержимое заказа</h3>
-                                    <form action="" class="form-delivery-method">
-                                        <input type="checkbox" class="check" id="pickup-check" checked />
-                                        <label for="pickup-check">Самовывоз - <span>бесплатно</span></label>
-                                        <p>Вы можете самостоятельно забрать товар со склада.</p>
-                                        <input type="checkbox" class="check" id="courier-check" checked />
-                                        <label for="courier-check">Доставка курьером по Москве - 400 руб.</label>
-                                        <p>Осуществляется в течение 3 (трех) рабочих дней</p>
-                                        <input type="checkbox" class="check" id="delivery-service-check" checked />
-                                        <label for="delivery-service-check">Доставка курьерской службой по России.</label>
-                                        <p>Осуществляется в течении 7 (семи) рабочих дней.</p>
-                                    </form>
+                                <div class="col-md-7">
+                                    <p>Принят, ожидается оплата (от 30.03.2015)</p>
                                 </div>
                             </div>
-                        </div> <!-- form-delivery-method end -->
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="payment-method">
-                                    <h3 class="page-title--h3">Способ оплаты</h3>
-                                    <form action="" class="form-payment-method">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/courier.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-courier-check" checked />
-                                                    <label for="payment-courier-check">Наличные курьеру</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/card.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-card-check" checked />
-                                                    <label for="payment-card-check">Банковские карты</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/e-money.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-e-money-check" checked />
-                                                    <label for="payment-e-money-check">Электронные деньги</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option payment-method__option--4">
-                                                    <div class="payment-method__img"><img src="img/delivery/terminal.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-terminal-check" checked />
-                                                    <label for="payment-terminal-check">Наличными через пункт приема</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/tel.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-tel-check" checked />
-                                                    <label for="payment-tel-check">Баланс телефона</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="payment-method__option">
-                                                    <div class="payment-method__img"><img src="img/delivery/intenet-bank.svg"></div>
-                                                    <input type="checkbox" class="check" id="payment-intenet-bank-check" checked />
-                                                    <label for="payment-intenet-bank-check">Интернет-банкинг</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <input type="checkbox" class="check" id="payment-clearing-check" checked />
-                                                <label class="clearing-label" for="payment-clearing-check">Безналичный расчет для юридических лиц</label>
-                                            </div>
-                                        </div>
-                                    </form>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Сумма к оплате</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>50 890 руб.</p>
                                 </div>
                             </div>
-                        </div> <!-- form-payment-method end -->
+                            <button class="button button--grey-fat button--fat"><a href="№">Отменить заказ</a></button>
+                        </div>
                     </div>
-                </div> <!--  row end -->
-
+                </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="page-title--h3">Содержимое заказа</h3>
+                        <div class="detail-order__container">
+                            <h3>Данные вашей учетной записи</h3>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Учетная запись</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>12345</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Логин</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>122345</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>E-mail</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>mail@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Тип плательщика</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Физическое лицо</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detail-order__container">
+                            <h3>Личные данные</h3>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>ФИО</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>12345</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Телефон</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>8 (812) 456-78-90</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>E-mail</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>mail@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detail-order__container">
+                            <h3>Данные для доставки</h3>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Индекс</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>12345</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Местоположение</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Россия, Московская обл. - Москва</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Город</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Москва</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Адрес доставки</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Суворовский пр-т, 54, оф. 123</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="detail-order__container">
+                            <h3>Оплата</h3>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Платежная система</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Наличные курьеру</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Оплачен</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Нет</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="dotted"><p>Служба доставки</p></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <p>Самовывоз</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -438,15 +453,6 @@
 
                                     </div>
                                 </div>
-                            </div> <!-- order__item end -->
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="order__item order__item--calculate">
-                                        <input class="button" type="submit" value="Пересчитать заказ" id="">
-                                        <input class="button button--not-active" type="submit" value="Оформить заказ" id="">
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -471,7 +477,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-2 col-md-offset-8">
-                                            <p>Сумма:</p>
+                                            <p>Сумма со скидкой:</p>
                                         </div>
                                         <div class="col-md-2">
                                             <span>8 100 000, 00 руб.</span>
@@ -483,7 +489,6 @@
 
                     </div>
                 </div> <!-- order end -->
-
             </div>
         </section>
 
@@ -567,5 +572,3 @@
             </div>
         </div>
     </footer>
-    
-</body>

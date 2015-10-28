@@ -32,16 +32,16 @@
 88__dP   dPYb   `Ybo." 88__   
 88""Yb  dP__Yb  o.`Y8b 88""   
 88oodP dP""""Yb 8bodP' 888888  */
+
 ul,
 li {
   padding: 0;
   margin: 0;
 }
 body {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 13px;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
   overflow-x: hidden;
 }
 p {
@@ -131,7 +131,6 @@ input[type="checkbox"].check + label {
   margin-bottom: 30px;
   cursor: pointer;
   box-sizing: border-box;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 input[type="checkbox"].check + label:before,
@@ -155,7 +154,6 @@ input[type="checkbox"].check + label:after {
   border-radius: 2px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 1;
-  -webkit-transition: border-color 200ms linear, border-width 200ms linear;
   transition: border-color 200ms linear, border-width 200ms linear;
 }
 input[type="checkbox"].check:checked + label:after {
@@ -165,7 +163,6 @@ input[type="checkbox"].check:checked + label:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   border-color: #999999;
-  -webkit-transition: border-color 200ms linear, border-width 200ms linear;
   transition: border-color 200ms linear, border-width 200ms linear;
 }
 /* checkbox end*/
@@ -193,8 +190,7 @@ blockquote {
   /* 15 */
   padding: 0em 1.538em;
   /*20*/
-  -webkit-transition: all 0.3s linear;
-          transition: all 0.3s linear;
+  transition: all 0.3s linear;
   margin-top: 10px;
 }
 .button a {
@@ -393,8 +389,7 @@ blockquote {
 }
 .card-submenu {
   display: none;
-  -webkit-transition: all 0.3s linear;
-          transition: all 0.3s linear;
+  transition: all 0.3s linear;
   width: 290px;
   padding: 20px;
   padding-top: 0px;
@@ -451,7 +446,7 @@ blockquote {
   margin: 0;
   z-index: 100;
   text-align: right;
-  padding-top: 1.154em;
+  padding-top: 1.154em
   /* 15 */
 }
 .main-nav__items {
@@ -506,12 +501,11 @@ blockquote {
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  transition: all 0.5s ease;
   text-align: center;
   padding-top: 0.769em;
   /*  10 */
-  padding-bottom: 0.769em;
+  padding-bottom: 0.769em
   /*  10 */
 }
 .main-nav__sub-menu a {
@@ -526,8 +520,7 @@ blockquote {
   text-align: left;
   padding-top: 13px;
   padding-bottom: 13px;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  transition: all 0.2s ease;
   width: 170px;
   margin: 0 auto;
 }
@@ -593,7 +586,7 @@ blockquote {
   height: 835px;
   background: #f1f1f1;
   position: relative;
-  margin-bottom: 0px;
+  margin-bottom: 0px
   /*first block end preview*/
 }
 .section-preview__bg-people {
@@ -650,14 +643,14 @@ blockquote {
   font-weight: 600;
   line-height: 1.563em;
   /*  25 */
-  padding-bottom: 1.375em;
+  padding-bottom: 1.375em
   /* 22 + 10(p) */
 }
 .section-preview__text {
   font-weight: 400;
   line-height: 1.769em;
   /* 23 */
-  padding-top: 1.692em;
+  padding-top: 1.692em
   /* 22 */
 }
 .section-preview__text:before {
@@ -684,7 +677,7 @@ blockquote {
   padding-bottom: 16.154em;
   /* 210 */
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0px
   /* second block end products */
 }
 .section-products p {
@@ -704,7 +697,7 @@ blockquote {
   font-family: 'Exo 2 Condensed';
   font-size: 2.615em;
   /* 34 */
-  padding-bottom: 1.618em;
+  padding-bottom: 1.618em
   /*  55 */
 }
 .section-products p {
@@ -723,15 +716,14 @@ blockquote {
   box-sizing: border-box;
   margin-top: 3.231 em;
   padding-top: 1em;
-  -webkit-transition: all 0.4s ease;
-          transition: all 0.4s ease;
+  transition: all 0.4s ease;
   min-height: 160px;
 }
 .section-products__item:hover {
   background: #624c9b;
 }
 .section-products__item img {
-  padding-bottom: 1.538em;
+  padding-bottom: 1.538em
   /* 20 */
 }
 .section-shop {
@@ -801,7 +793,7 @@ blockquote {
   /* 22 */
   font-weight: 700;
   color: #494157;
-  padding-bottom: 1.818em;
+  padding-bottom: 1.818em
   /* 40 */
 }
 .section-shop__right ul {
@@ -826,7 +818,7 @@ blockquote {
   font-size: 1.385em;
   /* 18 */
   color: dimgrey;
-  line-height: 1.944em;
+  line-height: 1.944em
   /* 35 */
 }
 .section-shop__right li:before {
@@ -856,7 +848,7 @@ blockquote {
   /* 60 */
   font-weight: 600;
   border-bottom: 1px solid #c6c6c6;
-  margin-bottom: 1.667em;
+  margin-bottom: 1.667em
   /* 40 */
 }
 .section-contact .contact__text h2:after {
@@ -872,7 +864,7 @@ blockquote {
   color: #454545;
   font-size: 1.077em;
   /*  14 */
-  line-height: 2.857em;
+  line-height: 2.857em
   /* 40 */
 }
 .section-contact .contact__item--green {
@@ -923,7 +915,7 @@ blockquote {
 .modal-dialog h3 {
   font-size: 20px;
   color: #2d2d2d;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-weight: 600;
   margin-top: 45px;
   padding-bottom: 10px;
@@ -990,7 +982,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   /* 16 */
   font-weight: 600;
   border: none;
-  margin-bottom: 1.250em;
+  margin-bottom: 1.250em
   /* 20 */
 }
 .page-title--h3:after {
@@ -1303,6 +1295,9 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
 .card .description__container--table p {
   padding-left: 2.308em;
 }
+.card .description__container .catalog__body {
+  padding-left: 0px;
+}
 .card .comments-container {
   margin-top: 0.769em;
   margin-left: 0.769em;
@@ -1473,7 +1468,6 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   height: 26px;
   padding-top: 3px;
   background-color: white;
-  background-image: -webkit-linear-gradient(bottom, rgba(201, 201, 201, 0.92) 0%, rgba(243, 243, 243, 0.92) 100%);
   background-image: linear-gradient(to top, rgba(201, 201, 201, 0.92) 0%, rgba(243, 243, 243, 0.92) 100%);
   border: 1px solid #b8b8b8;
   top: -18px;
@@ -1519,8 +1513,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .accordion__title .collapsed {
   background: none;
@@ -1560,8 +1553,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .accordion-sub__title .collapsed {
   background: none;
@@ -1874,8 +1866,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   background: url(img/sprites.png) no-repeat 0 -100px;
   width: 119px;
   height: 33px;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .soc-vk:hover {
   background: url(img/sprites.png) no-repeat 0 -65px;
@@ -1887,8 +1878,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   background: url(img/sprites.png) no-repeat -123px -100px;
   width: 114px;
   height: 33px;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .soc-fb:hover {
   background: url(img/sprites.png) -123px -65px;
@@ -1900,8 +1890,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   background: url(img/sprites.png) no-repeat -341px -100px;
   width: 144px;
   height: 33px;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .soc-od:hover {
   background: url(img/sprites.png) -341px -65px;
@@ -1913,8 +1902,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88
   background: url(img/sprites.png) no-repeat -241px -100px;
   width: 96px;
   height: 33px;
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .soc-tw:hover {
   background: url(img/sprites.png) -241px -65px;
@@ -2503,7 +2491,7 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
   color: #dfd5f1;
 }
 .page-footer__social {
-  padding-bottom: 1.538em;
+  padding-bottom: 1.538em
   /* 20 */
 }
 .page-footer__social a {
@@ -2590,8 +2578,3 @@ Yb      Yb   dP 88 Y88   88   88""   88 Y88   88       88""   88 Y88  8I  dY
 88__   dP   Yb dP   Yb   88   88__   88__dP     88__   88Yb88  8I  Yb 
 88""   Yb   dP Yb   dP   88   88""   88"Yb      88""   88 Y88  8I  dY 
 88      YbodP   YbodP    88   888888 88  Yb     888888 88  Y8 8888Y"   */
-/* 
-88""Yb 888888 .dP"Y8 88""Yb  dP"Yb  88b 88 .dP"Y8 88 Yb    dP 888888 
-88__dP 88__   `Ybo." 88__dP dP   Yb 88Yb88 `Ybo." 88  Yb  dP  88__   
-88"Yb  88""   o.`Y8b 88"""  Yb   dP 88 Y88 o.`Y8b 88   YbdP   88""   
-88  Yb 888888 8bodP' 88      YbodP  88  Y8 8bodP' 88    YP    888888  */

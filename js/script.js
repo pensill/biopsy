@@ -77,8 +77,9 @@ $( document ).ready(function() {
 /*similar Products*/
   $('.similar-products').slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToShow: 5,
+    slidesToScroll: 1,
+
   });
 /*similar Products end*/
 
